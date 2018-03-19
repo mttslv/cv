@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 115:
+/***/ 120:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 115;
+webpackEmptyAsyncContext.id = 120;
 
 /***/ }),
 
-/***/ 156:
+/***/ 162:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,230 +30,19 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 156;
+webpackEmptyAsyncContext.id = 162;
 
 /***/ }),
 
-/***/ 200:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(203);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var Page = (function () {
-    function Page(page, title, icon) {
-        this.page = page;
-        this.title = title;
-        this.icon = icon;
-    }
-    return Page;
-}());
-var TabsPage = (function () {
-    function TabsPage() {
-        this.tab1Root = new Page(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */], "Home", "home");
-        this.tab2Root = new Page(__WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */], "About", "information-circle");
-        this.tab3Root = new Page(__WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */], "Contact", "contacts");
-        this.tabslist = [this.tab1Root, this.tab2Root, this.tab3Root];
-    }
-    return TabsPage;
-}());
-TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\tabs\tabs.html"*/'<ion-tabs tabsPlacement="top" tabsHighlight="true" >\n  <ion-tab\n    *ngFor="let item of tabslist"\n      [root]="item.page"\n      [tabTitle]="item.title"\n      [tabIcon]="item.icon" >\n    </ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\tabs\tabs.html"*/
-    }),
-    __metadata("design:paramtypes", [])
-], TabsPage);
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
-/***/ 201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__OrbitControls__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__TransformControls__ = __webpack_require__(394);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-//import './DragControls';
-
-var AboutPage = (function () {
-    function AboutPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    AboutPage.prototype.ngOnInit = function () {
-        this.container = this.elementRef.nativeElement;
-        this.init();
-    };
-    AboutPage.prototype.init = function () {
-        var screen = {
-            width: 400,
-            height: 400
-        }, view = {
-            angle: 45,
-            aspect: screen.width / screen.height,
-            near: 0.1,
-            far: 1000
-        };
-        this.scene = new __WEBPACK_IMPORTED_MODULE_2_three__["A" /* Scene */]();
-        this.camera = new __WEBPACK_IMPORTED_MODULE_2_three__["w" /* PerspectiveCamera */](view.angle, view.aspect, view.near, view.far);
-        this.renderer = new __WEBPACK_IMPORTED_MODULE_2_three__["K" /* WebGLRenderer */]();
-        this.scene.add(this.camera);
-        this.scene.add(new __WEBPACK_IMPORTED_MODULE_2_three__["a" /* AxisHelper */](20));
-        this.camera.position.set(10, 10, 10);
-        this.camera.lookAt(new __WEBPACK_IMPORTED_MODULE_2_three__["J" /* Vector3 */](0, 0, 0));
-        this.renderer.setSize(screen.width, screen.height);
-        this.container.appendChild(this.renderer.domElement);
-        var geometry = new __WEBPACK_IMPORTED_MODULE_2_three__["c" /* BoxGeometry */](5, 5, 5), material = new __WEBPACK_IMPORTED_MODULE_2_three__["r" /* MeshBasicMaterial */]({ color: 0xFFFFFF, wireframe: false });
-        this.cube = new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Mesh */](geometry, material);
-        this.cube.position.set(-5, -45, -45);
-        this.scene.add(this.cube);
-        this.objects = [];
-        for (var i = 0; i < 5; i++) {
-            var object = new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Mesh */](geometry, material);
-            object.position.x = Math.random() * (1 + 100) + (-100);
-            object.position.y = Math.random() * (1 + 100) + (-100);
-            object.position.z = Math.random() * (1 + 100) + (-100);
-            // object.position.set(-30,-30,-30);
-            this.objects.push(object);
-            this.scene.add(object);
-        }
-        //controllo camera con mouse
-        this.controls = new __WEBPACK_IMPORTED_MODULE_2_three__["OrbitControls"](this.camera, this.renderer.domElement);
-        var controls = this.controls;
-        //this.controls.addEventListener( 'change', this.render ); // remove when using animation loop
-        // enable animation loop when using damping or autorotation
-        //controls.enableDamping = true;
-        //controls.dampingFactor = 0.25;
-        this.controls.enableZoom = true;
-        this.dragControls = new __WEBPACK_IMPORTED_MODULE_2_three__["TransformControls"](this.camera, this.renderer.domElement);
-        var dragControls1 = new __WEBPACK_IMPORTED_MODULE_2_three__["TransformControls"](this.camera, this.renderer.domElement);
-        this.dragControls.attach(this.objects[0]);
-        dragControls1.attach(this.objects[1]);
-        this.scene.add(this.dragControls);
-        this.scene.add(dragControls1);
-        this.render();
-    };
-    AboutPage.prototype.render = function () {
-        var self = this;
-        //this.controls.update();
-        //   this.dragControls.update();
-        (function render() {
-            requestAnimationFrame(render);
-            // // find intersections
-            // 	this.raycaster.setFromCamera( this.mouse, this.camera );
-            // 	var intersects = this.raycaster.intersectObjects( this.scene.children );
-            // 	if ( intersects.length > 0 ) {
-            // 		if ( this.INTERSECTED != intersects[ 0 ].object ) {
-            // 			if ( this.INTERSECTED ) this.INTERSECTED.material.emissive.setHex( this.INTERSECTED.currentHex );
-            // 			this.INTERSECTED = intersects[ 0 ].object;
-            // 			this.INTERSECTED.currentHex = this.INTERSECTED.material.emissive.getHex();
-            // 			this.INTERSECTED.material.emissive.setHex( 0xff0000 );
-            // 		}
-            // 	} else {
-            // 		if ( this.INTERSECTED ) this.INTERSECTED.material.emissive.setHex( this.INTERSECTED.currentHex );
-            // 		this.INTERSECTED = null;
-            // 	}
-            self.renderer.render(self.scene, self.camera);
-            self.animate();
-        }());
-    };
-    AboutPage.prototype.animate = function () {
-        // this.cube.rotateX(0.1);
-        // this.cube.rotateY(0.1);
-        // this.cube.position.addScalar(0.2);
-    };
-    return AboutPage;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('container'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-], AboutPage.prototype, "elementRef", void 0);
-AboutPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-about',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div #container></div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\about\about.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-], AboutPage);
-
-//# sourceMappingURL=about.js.map
-
-/***/ }),
-
-/***/ 202:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ContactPage = (function () {
-    function ContactPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    return ContactPage;
-}());
-ContactPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-contact',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\contact\contact.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-], ContactPage);
-
-//# sourceMappingURL=contact.js.map
-
-/***/ }),
-
-/***/ 203:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_language_language__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_language_language__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(206);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -266,41 +55,83 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
-    function HomePage(navCtrl) {
+    function HomePage(navCtrl, ref, httpClient) {
+        var _this = this;
         this.navCtrl = navCtrl;
+        this.ref = ref;
+        this.httpClient = httpClient;
+        this.gitRepositories = [];
         this.languages = [
-            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("js", 3, '<svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path></svg>'),
-            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("java", 4, '<svg viewBox="0 0 128 128"><path fill="#0074BD" d="M52.581 67.817s-3.284 1.911 2.341 2.557c6.814.778 10.297.666 17.805-.753 0 0 1.979 1.237 4.735 2.309-16.836 7.213-38.104-.418-24.881-4.113zM50.522 58.402s-3.684 2.729 1.945 3.311c7.28.751 13.027.813 22.979-1.103 0 0 1.373 1.396 3.536 2.157-20.352 5.954-43.021.469-28.46-4.365z"></path><path fill="#EA2D2E" d="M67.865 42.431c4.151 4.778-1.088 9.074-1.088 9.074s10.533-5.437 5.696-12.248c-4.519-6.349-7.982-9.502 10.771-20.378.001 0-29.438 7.35-15.379 23.552z"></path><path fill="#0074BD" d="M90.132 74.781s2.432 2.005-2.678 3.555c-9.716 2.943-40.444 3.831-48.979.117-3.066-1.335 2.687-3.187 4.496-3.576 1.887-.409 2.965-.334 2.965-.334-3.412-2.403-22.055 4.719-9.469 6.762 34.324 5.563 62.567-2.506 53.665-6.524zM54.162 48.647s-15.629 3.713-5.534 5.063c4.264.57 12.758.439 20.676-.225 6.469-.543 12.961-1.704 12.961-1.704s-2.279.978-3.93 2.104c-15.874 4.175-46.533 2.23-37.706-2.038 7.463-3.611 13.533-3.2 13.533-3.2zM82.2 64.317c16.135-8.382 8.674-16.438 3.467-15.353-1.273.266-1.845.496-1.845.496s.475-.744 1.378-1.063c10.302-3.62 18.223 10.681-3.322 16.345 0 0 .247-.224.322-.425z"></path><path fill="#EA2D2E" d="M72.474 1.313s8.935 8.939-8.476 22.682c-13.962 11.027-3.184 17.313-.006 24.498-8.15-7.354-14.128-13.828-10.118-19.852 5.889-8.842 22.204-13.131 18.6-27.328z"></path><path fill="#0074BD" d="M55.749 87.039c15.484.99 39.269-.551 39.832-7.878 0 0-1.082 2.777-12.799 4.981-13.218 2.488-29.523 2.199-39.191.603 0 0 1.98 1.64 12.158 2.294z"></path><path fill="#EA2D2E" d="M94.866 100.181h-.472v-.264h1.27v.264h-.47v1.317h-.329l.001-1.317zm2.535.066h-.006l-.468 1.251h-.216l-.465-1.251h-.005v1.251h-.312v-1.581h.457l.431 1.119.432-1.119h.454v1.581h-.302v-1.251zM53.211 115.037c-1.46 1.266-3.004 1.978-4.391 1.978-1.974 0-3.045-1.186-3.045-3.085 0-2.055 1.146-3.56 5.738-3.56h1.697v4.667h.001zm4.031 4.548v-14.077c0-3.599-2.053-5.973-6.997-5.973-2.886 0-5.416.714-7.473 1.622l.592 2.493c1.62-.595 3.715-1.147 5.771-1.147 2.85 0 4.075 1.147 4.075 3.521v1.779h-1.424c-6.921 0-10.044 2.685-10.044 6.723 0 3.479 2.058 5.456 5.933 5.456 2.49 0 4.351-1.028 6.088-2.533l.316 2.137h3.163v-.001zM70.694 119.585h-5.027l-6.051-19.689h4.391l3.756 12.099.835 3.635c1.896-5.258 3.24-10.596 3.912-15.733h4.271c-1.143 6.481-3.203 13.598-6.087 19.688zM89.982 115.037c-1.465 1.266-3.01 1.978-4.392 1.978-1.976 0-3.046-1.186-3.046-3.085 0-2.055 1.149-3.56 5.736-3.56h1.701v4.667h.001zm4.033 4.548v-14.077c0-3.599-2.059-5.973-6.999-5.973-2.889 0-5.418.714-7.475 1.622l.593 2.493c1.62-.595 3.718-1.147 5.774-1.147 2.846 0 4.074 1.147 4.074 3.521v1.779h-1.424c-6.923 0-10.045 2.685-10.045 6.723 0 3.479 2.056 5.456 5.93 5.456 2.491 0 4.349-1.028 6.091-2.533l.318 2.137h3.163v-.001zM37.322 122.931c-1.147 1.679-3.005 3.008-5.037 3.757l-1.989-2.345c1.547-.794 2.872-2.075 3.489-3.269.532-1.063.753-2.43.753-5.701v-22.482h4.284v22.173c0 4.375-.348 6.144-1.5 7.867z"></path></svg>'),
-            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("php", 4, '<svg viewBox="0 0 128 128"><path id="a" d="M64.026 96.076c33.676 0 60.976-14.361 60.976-32.076s-27.3-32.075-60.976-32.075-60.975 14.36-60.975 32.075 27.3 32.076 60.975 32.076"></path><path id="c" d="M2.998 31.924h122.004v64.1h-122.004z"></path><path id="e" d="M2.998 31.924h122.004v64.1h-122.004z"></path><path fill="#6181B6" d="M64.026 93.694c32.36 0 58.594-13.295 58.594-29.694s-26.233-29.694-58.594-29.694-58.593 13.295-58.593 29.694 26.233 29.694 58.593 29.694z"></path><path fill="#fff" d="M75.896 73.598l2.906-14.958c.656-3.377.11-5.896-1.62-7.486-1.677-1.54-4.523-2.288-8.703-2.288h-5.033l1.44-7.412c.055-.279-.02-.568-.2-.788-.181-.219-.45-.347-.735-.347h-6.947c-.456 0-.848.323-.936.771l-3.086 15.881c-.28-1.787-.973-3.323-2.079-4.591-2.038-2.332-5.261-3.515-9.58-3.515h-13.467c-.456 0-.848.322-.935.771l-6.247 32.144c-.055.278.02.568.2.787.181.22.451.347.735.347h7.002c.456 0 .849-.323.936-.771l1.511-7.775h5.213c2.735 0 5.032-.296 6.827-.881 1.834-.596 3.522-1.607 5.011-3.001 1.202-1.104 2.196-2.341 2.96-3.676l-1.248 6.424c-.054.278.02.567.2.787s.451.347.735.347h6.947c.456 0 .848-.323.936-.771l3.429-17.645h4.767c2.031 0 2.626.404 2.787.578.147.159.452.718.11 2.48l-2.764 14.223c-.055.278.019.567.2.787.181.22.45.347.735.347h7.058c.455.001.848-.322.935-.769zm-32.208-12.36c-.437 2.242-1.259 3.842-2.444 4.755-1.205.927-3.132 1.397-5.727 1.397h-3.104l2.244-11.548h4.012c2.948 0 4.136.63 4.612 1.158.662.734.802 2.199.407 4.238zM105.604 52.38c-2.038-2.332-5.261-3.515-9.581-3.515h-13.464c-.456 0-.849.322-.936.771l-6.248 32.144c-.054.278.02.568.201.787.181.22.45.347.734.347h7.003c.455 0 .848-.323.935-.771l1.512-7.775h5.212c2.735 0 5.033-.296 6.827-.881 1.835-.596 3.522-1.607 5.011-3.001 1.241-1.141 2.264-2.421 3.037-3.806.772-1.383 1.328-2.927 1.65-4.588.797-4.094.16-7.363-1.893-9.712zm-7.262 8.858c-.437 2.242-1.259 3.842-2.444 4.755-1.204.927-3.131 1.397-5.727 1.397h-3.104l2.245-11.548h4.012c2.948 0 4.136.63 4.612 1.158.662.734.801 2.199.406 4.238z"></path><path fill="#000004" d="M38.67 54.89c2.66 0 4.434.491 5.32 1.474.885.982 1.097 2.668.633 5.057-.484 2.488-1.416 4.264-2.798 5.328-1.382 1.063-3.485 1.595-6.308 1.595h-4.26l2.614-13.453h4.799v-.001zm-17.061 27.072h7.002l1.661-8.546h5.998c2.646 0 4.823-.277 6.532-.834 1.709-.556 3.263-1.488 4.661-2.797 1.173-1.078 2.122-2.268 2.85-3.569.727-1.3 1.242-2.734 1.547-4.305.741-3.811.182-6.778-1.676-8.904s-4.812-3.189-8.862-3.189h-13.466l-6.247 32.144zM57.003 41.271h6.947l-1.661 8.546h6.189c3.894 0 6.58.68 8.059 2.037 1.479 1.359 1.921 3.561 1.33 6.603l-2.906 14.959h-7.058l2.763-14.223c.314-1.618.199-2.722-.347-3.311-.546-.587-1.708-.882-3.485-.882h-5.553l-3.578 18.416h-6.947l6.247-32.145zM93.324 54.89c2.66 0 4.434.491 5.319 1.474.887.982 1.097 2.668.634 5.057-.484 2.488-1.417 4.264-2.799 5.328-1.382 1.063-3.484 1.595-6.308 1.595h-4.259l2.614-13.453h4.799v-.001zm-17.06 27.072h7.002l1.661-8.546h5.997c2.646 0 4.823-.277 6.532-.834 1.71-.556 3.264-1.488 4.661-2.797 1.174-1.078 2.123-2.268 2.851-3.569.726-1.3 1.242-2.734 1.547-4.305.74-3.811.182-6.778-1.676-8.904s-4.812-3.189-8.863-3.189h-13.465l-6.247 32.144z"></path></svg>'),
-            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("phyton", 4, '<svg viewBox="0 0 128 128"><path fill="#646464" d="M52.458 61.139c0-4.071-1.161-6.161-3.483-6.275-.924-.045-1.826.103-2.703.443-.701.251-1.172.499-1.42.75v9.718c1.485.932 2.804 1.364 3.954 1.297 2.433-.162 3.652-2.137 3.652-5.933zm2.863.169c0 2.068-.484 3.785-1.46 5.15-1.087 1.546-2.594 2.34-4.521 2.385-1.453.047-2.949-.409-4.488-1.363v8.833l-2.491-.889v-19.606c.409-.5.935-.931 1.572-1.296 1.482-.864 3.284-1.308 5.404-1.33l.036.035c1.938-.024 3.431.771 4.479 2.385.979 1.48 1.469 3.377 1.469 5.696z"></path><path fill="#646464" d="M70.544 67.104c0 2.773-.278 4.694-.834 5.763-.559 1.068-1.622 1.921-3.191 2.557-1.272.501-2.649.773-4.126.819l-.412-1.569c1.501-.204 2.559-.409 3.172-.613 1.207-.408 2.036-1.035 2.491-1.875.365-.684.545-1.988.545-3.921v-.648c-1.703.773-3.488 1.158-5.354 1.158-1.227 0-2.309-.385-3.24-1.158-1.046-.842-1.57-1.911-1.57-3.205v-10.367l2.491-.853v10.435c0 1.114.359 1.973 1.079 2.574.72.603 1.651.892 2.793.87 1.142-.024 2.365-.467 3.665-1.33v-12.173h2.491v13.536z"></path><path fill="#646464" d="M80.267 68.706c-.297.024-.569.035-.82.035-1.409 0-2.507-.334-3.292-1.008-.783-.674-1.175-1.603-1.175-2.788v-9.811h-1.706v-1.566h1.706v-4.161l2.488-.886v5.047h2.798v1.566h-2.798v9.743c0 .935.25 1.597.752 1.982.43.32 1.115.502 2.046.549v1.298z"></path><path fill="#646464" d="M95.347 68.502h-2.49v-9.614c0-.978-.229-1.82-.684-2.524-.526-.795-1.256-1.193-2.194-1.193-1.142 0-2.57.603-4.284 1.808v11.524h-2.491v-22.98l2.491-.785v10.467c1.591-1.158 3.33-1.738 5.218-1.738 1.319 0 2.387.444 3.205 1.33.82.886 1.229 1.989 1.229 3.308v10.397z"></path><path fill="#646464" d="M108.586 60.747c0-1.565-.297-2.856-.888-3.879-.704-1.245-1.796-1.902-3.273-1.97-2.731.157-4.094 2.114-4.094 5.864 0 1.72.284 3.155.856 4.308.73 1.47 1.826 2.193 3.287 2.169 2.741-.02 4.112-2.184 4.112-6.492zm2.728.016c0 2.227-.57 4.079-1.707 5.56-1.25 1.656-2.978 2.487-5.183 2.487-2.186 0-3.889-.831-5.118-2.487-1.114-1.48-1.671-3.333-1.671-5.56 0-2.093.603-3.853 1.808-5.287 1.272-1.521 2.945-2.283 5.014-2.283 2.068 0 3.752.763 5.049 2.283 1.205 1.434 1.808 3.194 1.808 5.287z"></path><path fill="#646464" d="M125.593 68.502h-2.491v-10.159c0-1.114-.335-1.984-1.006-2.61-.67-.625-1.564-.928-2.679-.903-1.183.022-2.308.41-3.376 1.159v12.514h-2.491v-12.822c1.433-1.044 2.752-1.726 3.957-2.044 1.136-.297 2.139-.444 3.003-.444.591 0 1.147.058 1.67.172.979.226 1.774.646 2.387 1.261.684.682 1.025 1.5 1.025 2.456v11.42z"></path><path fill="url(#a)" d="M17.761 45.612c-1.282.007-2.505.116-3.583.307-3.172.561-3.748 1.734-3.748 3.896v2.857h7.496v.952h-10.309000000000001c-2.179 0-4.086 1.31-4.683 3.8-.688 2.856-.719 4.639 0 7.619.533 2.219 1.805 3.801 3.984 3.801h2.577v-3.424c0-2.475 2.141-4.657 4.683-4.657h7.488c2.084 0 3.748-1.717 3.748-3.809v-7.139c0-2.031-1.714-3.558-3.748-3.896-1.288-.214-2.624-.312-3.905-.307zm-4.054 2.299c.774 0 1.407.643 1.407 1.433 0 .787-.632 1.425-1.407 1.425-.777 0-1.406-.638-1.406-1.425-.001-.79.629-1.433 1.406-1.433z"></path><path fill="url(#b)" d="M26.349 53.625v3.329c0 2.58-2.188 4.752-4.683 4.752h-7.488c-2.051 0-3.748 1.756-3.748 3.81v7.139c0 2.03 1.767 3.227 3.748 3.809 2.373.698 4.648.824 7.488 0 1.887-.546 3.748-1.646 3.748-3.809v-2.857h-7.488v-.952h11.236c2.179 0 2.991-1.52 3.749-3.801.782-2.348.749-4.606 0-7.619-.539-2.168-1.567-3.8-3.749-3.8h-2.813zm-4.212 18.077c.777 0 1.407.636 1.407 1.424 0 .79-.629 1.432-1.407 1.432-.774 0-1.406-.642-1.406-1.432 0-.788.632-1.424 1.406-1.424z"></path><path opacity=".444" fill="url(#c)" enable-background="new" d="M28.057 81.315c0 1.075-4.498 1.948-10.045 1.948-5.548 0-10.046-.873-10.046-1.948 0-1.076 4.498-1.948 10.046-1.948 5.548 0 10.045.872 10.045 1.948z"></path></svg>')
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("js", 8, '<svg viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185h-125.184z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("css3", 8, '<svg viewBox="0 0 128 128"><path fill="#1572B6" d="M18.814 114.123l-10.054-112.771h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"></path><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"></path><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163h-19.566v-13.831h34.681999999999995l-.332 3.711-3.4 38.114h-30.95v-13.831z"></path><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031h-13.882l1.937 21.717 28.331 7.863.063-.018v-14.39z"></path><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881h-13.876z"></path><path fill="#EBEBEB" d="M64.048 23.435v13.831000000000001h-33.407999999999994l-.277-3.108-.63-7.012-.331-3.711h34.646zM64.001 51.431v13.831000000000001h-15.209l-.277-3.108-.631-7.012-.33-3.711h16.447z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("html5", 8, '<svg viewBox="0 0 128 128"><path fill="#E44D26" d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"></path><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878h-44.937z"></path><path fill="#EBEBEB" d="M64 52.455h-18.212l-1.258-14.094h19.47v-13.762h-34.511l.33 3.692 3.382 37.927h30.799zM64 88.198l-.061.017-15.327-4.14-.979-10.975h-13.817l1.928 21.609 28.193 7.826.063-.017z"></path><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zM63.952 24.599v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("java", 8, '<svg viewBox="0 0 128 128"><path fill="#0074BD" d="M52.581 67.817s-3.284 1.911 2.341 2.557c6.814.778 10.297.666 17.805-.753 0 0 1.979 1.237 4.735 2.309-16.836 7.213-38.104-.418-24.881-4.113zM50.522 58.402s-3.684 2.729 1.945 3.311c7.28.751 13.027.813 22.979-1.103 0 0 1.373 1.396 3.536 2.157-20.352 5.954-43.021.469-28.46-4.365z"></path><path fill="#EA2D2E" d="M67.865 42.431c4.151 4.778-1.088 9.074-1.088 9.074s10.533-5.437 5.696-12.248c-4.519-6.349-7.982-9.502 10.771-20.378.001 0-29.438 7.35-15.379 23.552z"></path><path fill="#0074BD" d="M90.132 74.781s2.432 2.005-2.678 3.555c-9.716 2.943-40.444 3.831-48.979.117-3.066-1.335 2.687-3.187 4.496-3.576 1.887-.409 2.965-.334 2.965-.334-3.412-2.403-22.055 4.719-9.469 6.762 34.324 5.563 62.567-2.506 53.665-6.524zM54.162 48.647s-15.629 3.713-5.534 5.063c4.264.57 12.758.439 20.676-.225 6.469-.543 12.961-1.704 12.961-1.704s-2.279.978-3.93 2.104c-15.874 4.175-46.533 2.23-37.706-2.038 7.463-3.611 13.533-3.2 13.533-3.2zM82.2 64.317c16.135-8.382 8.674-16.438 3.467-15.353-1.273.266-1.845.496-1.845.496s.475-.744 1.378-1.063c10.302-3.62 18.223 10.681-3.322 16.345 0 0 .247-.224.322-.425z"></path><path fill="#EA2D2E" d="M72.474 1.313s8.935 8.939-8.476 22.682c-13.962 11.027-3.184 17.313-.006 24.498-8.15-7.354-14.128-13.828-10.118-19.852 5.889-8.842 22.204-13.131 18.6-27.328z"></path><path fill="#0074BD" d="M55.749 87.039c15.484.99 39.269-.551 39.832-7.878 0 0-1.082 2.777-12.799 4.981-13.218 2.488-29.523 2.199-39.191.603 0 0 1.98 1.64 12.158 2.294z"></path><path fill="#EA2D2E" d="M94.866 100.181h-.472v-.264h1.27v.264h-.47v1.317h-.329l.001-1.317zm2.535.066h-.006l-.468 1.251h-.216l-.465-1.251h-.005v1.251h-.312v-1.581h.457l.431 1.119.432-1.119h.454v1.581h-.302v-1.251zM53.211 115.037c-1.46 1.266-3.004 1.978-4.391 1.978-1.974 0-3.045-1.186-3.045-3.085 0-2.055 1.146-3.56 5.738-3.56h1.697v4.667h.001zm4.031 4.548v-14.077c0-3.599-2.053-5.973-6.997-5.973-2.886 0-5.416.714-7.473 1.622l.592 2.493c1.62-.595 3.715-1.147 5.771-1.147 2.85 0 4.075 1.147 4.075 3.521v1.779h-1.424c-6.921 0-10.044 2.685-10.044 6.723 0 3.479 2.058 5.456 5.933 5.456 2.49 0 4.351-1.028 6.088-2.533l.316 2.137h3.163v-.001zM70.694 119.585h-5.027l-6.051-19.689h4.391l3.756 12.099.835 3.635c1.896-5.258 3.24-10.596 3.912-15.733h4.271c-1.143 6.481-3.203 13.598-6.087 19.688zM89.982 115.037c-1.465 1.266-3.01 1.978-4.392 1.978-1.976 0-3.046-1.186-3.046-3.085 0-2.055 1.149-3.56 5.736-3.56h1.701v4.667h.001zm4.033 4.548v-14.077c0-3.599-2.059-5.973-6.999-5.973-2.889 0-5.418.714-7.475 1.622l.593 2.493c1.62-.595 3.718-1.147 5.774-1.147 2.846 0 4.074 1.147 4.074 3.521v1.779h-1.424c-6.923 0-10.045 2.685-10.045 6.723 0 3.479 2.056 5.456 5.93 5.456 2.491 0 4.349-1.028 6.091-2.533l.318 2.137h3.163v-.001zM37.322 122.931c-1.147 1.679-3.005 3.008-5.037 3.757l-1.989-2.345c1.547-.794 2.872-2.075 3.489-3.269.532-1.063.753-2.43.753-5.701v-22.482h4.284v22.173c0 4.375-.348 6.144-1.5 7.867z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("php", 6, '<svg viewBox="0 0 128 128"><path id="a" d="M64.026 96.076c33.676 0 60.976-14.361 60.976-32.076s-27.3-32.075-60.976-32.075-60.975 14.36-60.975 32.075 27.3 32.076 60.975 32.076"></path><path id="c" d="M2.998 31.924h122.004v64.1h-122.004z"></path><path id="e" d="M2.998 31.924h122.004v64.1h-122.004z"></path><path fill="#6181B6" d="M64.026 93.694c32.36 0 58.594-13.295 58.594-29.694s-26.233-29.694-58.594-29.694-58.593 13.295-58.593 29.694 26.233 29.694 58.593 29.694z"></path><path fill="#fff" d="M75.896 73.598l2.906-14.958c.656-3.377.11-5.896-1.62-7.486-1.677-1.54-4.523-2.288-8.703-2.288h-5.033l1.44-7.412c.055-.279-.02-.568-.2-.788-.181-.219-.45-.347-.735-.347h-6.947c-.456 0-.848.323-.936.771l-3.086 15.881c-.28-1.787-.973-3.323-2.079-4.591-2.038-2.332-5.261-3.515-9.58-3.515h-13.467c-.456 0-.848.322-.935.771l-6.247 32.144c-.055.278.02.568.2.787.181.22.451.347.735.347h7.002c.456 0 .849-.323.936-.771l1.511-7.775h5.213c2.735 0 5.032-.296 6.827-.881 1.834-.596 3.522-1.607 5.011-3.001 1.202-1.104 2.196-2.341 2.96-3.676l-1.248 6.424c-.054.278.02.567.2.787s.451.347.735.347h6.947c.456 0 .848-.323.936-.771l3.429-17.645h4.767c2.031 0 2.626.404 2.787.578.147.159.452.718.11 2.48l-2.764 14.223c-.055.278.019.567.2.787.181.22.45.347.735.347h7.058c.455.001.848-.322.935-.769zm-32.208-12.36c-.437 2.242-1.259 3.842-2.444 4.755-1.205.927-3.132 1.397-5.727 1.397h-3.104l2.244-11.548h4.012c2.948 0 4.136.63 4.612 1.158.662.734.802 2.199.407 4.238zM105.604 52.38c-2.038-2.332-5.261-3.515-9.581-3.515h-13.464c-.456 0-.849.322-.936.771l-6.248 32.144c-.054.278.02.568.201.787.181.22.45.347.734.347h7.003c.455 0 .848-.323.935-.771l1.512-7.775h5.212c2.735 0 5.033-.296 6.827-.881 1.835-.596 3.522-1.607 5.011-3.001 1.241-1.141 2.264-2.421 3.037-3.806.772-1.383 1.328-2.927 1.65-4.588.797-4.094.16-7.363-1.893-9.712zm-7.262 8.858c-.437 2.242-1.259 3.842-2.444 4.755-1.204.927-3.131 1.397-5.727 1.397h-3.104l2.245-11.548h4.012c2.948 0 4.136.63 4.612 1.158.662.734.801 2.199.406 4.238z"></path><path fill="#000004" d="M38.67 54.89c2.66 0 4.434.491 5.32 1.474.885.982 1.097 2.668.633 5.057-.484 2.488-1.416 4.264-2.798 5.328-1.382 1.063-3.485 1.595-6.308 1.595h-4.26l2.614-13.453h4.799v-.001zm-17.061 27.072h7.002l1.661-8.546h5.998c2.646 0 4.823-.277 6.532-.834 1.709-.556 3.263-1.488 4.661-2.797 1.173-1.078 2.122-2.268 2.85-3.569.727-1.3 1.242-2.734 1.547-4.305.741-3.811.182-6.778-1.676-8.904s-4.812-3.189-8.862-3.189h-13.466l-6.247 32.144zM57.003 41.271h6.947l-1.661 8.546h6.189c3.894 0 6.58.68 8.059 2.037 1.479 1.359 1.921 3.561 1.33 6.603l-2.906 14.959h-7.058l2.763-14.223c.314-1.618.199-2.722-.347-3.311-.546-.587-1.708-.882-3.485-.882h-5.553l-3.578 18.416h-6.947l6.247-32.145zM93.324 54.89c2.66 0 4.434.491 5.319 1.474.887.982 1.097 2.668.634 5.057-.484 2.488-1.417 4.264-2.799 5.328-1.382 1.063-3.484 1.595-6.308 1.595h-4.259l2.614-13.453h4.799v-.001zm-17.06 27.072h7.002l1.661-8.546h5.997c2.646 0 4.823-.277 6.532-.834 1.71-.556 3.264-1.488 4.661-2.797 1.174-1.078 2.123-2.268 2.851-3.569.726-1.3 1.242-2.734 1.547-4.305.74-3.811.182-6.778-1.676-8.904s-4.812-3.189-8.863-3.189h-13.465l-6.247 32.144z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("phyton", 6, '<svg viewBox="0 0 128 128"><path fill="#FFD845" d="M40 68v-10.079c0-6.973 6.218-12.921 13.383-12.921h21.102c5.874 0 9.515-5.04 9.515-10.938v-20.117c0-5.726-4.306-10.026-10.04-10.981-3.629-.604-7.131-.879-10.743-.862-3.611.017-7.339.324-10.374.862-8.941 1.578-10.843 4.884-10.843 10.981v8.055h21v3h-28.108999999999998c-6.14 0-11.516 3.53-13.198 10.552-1.939 8.047-2.025 13.202 0 21.605 1.502 6.254 5.089 10.843 11.228 10.843h7.079zm12.054-51.372c-2.19 0-3.964-1.795-3.964-4.013 0-2.229 1.773-4.039 3.964-4.039 2.182 0 3.964 1.811 3.964 4.039 0 2.218-1.782 4.013-3.964 4.013zM106.175 35.552c-1.517-6.114-4.416-10.552-10.563-10.552h-8.612v9.062c0 7.273-5.484 13.938-12.515 13.938h-21.102c-5.78 0-11.383 4.403-11.383 10.193v20.117c0 5.725 5.388 9.093 10.974 10.734 6.686 1.967 12.781 2.322 20.782 0 5.318-1.54 10.244-4.638 10.244-10.734v-7.31h-21v-3h32.611c6.14 0 8.428-4.416 10.563-10.843 2.206-6.618 2.112-13.115.001-21.605zm-30.361 40.073c2.19 0 3.965 1.795 3.965 4.015 0 2.227-1.774 4.037-3.965 4.037-2.182 0-3.963-1.811-3.963-4.037 0-2.22 1.781-4.015 3.963-4.015z"></path><path fill="#FFD845" d="M34.911 112.049c0-3.757-1.072-5.686-3.214-5.791-.853-.041-1.685.095-2.495.409-.646.231-1.082.461-1.311.692v8.968c1.371.86 2.588 1.26 3.649 1.197 2.247-.148 3.371-1.971 3.371-5.475zm2.643.157c0 1.909-.447 3.493-1.348 4.753-1.003 1.427-2.394 2.16-4.172 2.201-1.34.043-2.721-.378-4.142-1.258v8.151l-2.298-.82v-18.093c.377-.462.862-.859 1.451-1.196 1.368-.798 3.031-1.207 4.987-1.228l.033.032c1.788-.022 3.166.712 4.134 2.201.902 1.366 1.355 3.117 1.355 5.257z"></path><path fill="#FFD845" d="M51.603 117.555c0 2.56-.257 4.333-.77 5.318-.516.986-1.497 1.773-2.945 2.359-1.174.463-2.444.714-3.808.757l-.38-1.448c1.386-.188 2.362-.378 2.928-.566 1.114-.377 1.878-.955 2.298-1.73.337-.631.503-1.835.503-3.618v-.599c-1.571.714-3.219 1.068-4.941 1.068-1.132 0-2.13-.354-2.99-1.068-.966-.777-1.449-1.764-1.449-2.958v-9.566l2.299-.787v9.63c0 1.028.332 1.82.996 2.376s1.524.822 2.578.803c1.054-.022 2.183-.431 3.382-1.228v-11.234h2.299v12.491z"></path><path fill="#FFD845" d="M60.576 119.034c-.274.022-.525.032-.757.032-1.3 0-2.314-.309-3.038-.93-.722-.622-1.084-1.479-1.084-2.573v-9.054h-1.574v-1.446h1.574v-3.84l2.296-.817v4.657h2.583v1.446h-2.583v8.991c0 .862.231 1.474.694 1.83.397.295 1.029.463 1.889.506v1.198z"></path><path fill="#FFD845" d="M74.493 118.845h-2.298v-8.873c0-.902-.211-1.68-.631-2.329-.485-.734-1.159-1.102-2.024-1.102-1.054 0-2.372.556-3.954 1.668v10.636h-2.298v-21.208l2.298-.725v9.659c1.469-1.068 3.073-1.604 4.816-1.604 1.218 0 2.203.41 2.958 1.228.757.817 1.134 1.836 1.134 3.053v9.597h-.001z"></path><path fill="#FFD845" d="M86.711 111.688c0-1.444-.274-2.636-.82-3.579-.649-1.149-1.657-1.756-3.021-1.818-2.52.146-3.778 1.951-3.778 5.412 0 1.587.262 2.912.79 3.976.674 1.356 1.685 2.024 3.033 2.002 2.531-.02 3.796-2.017 3.796-5.993zm2.518.015c0 2.055-.526 3.765-1.575 5.131-1.154 1.528-2.749 2.296-4.783 2.296-2.017 0-3.589-.768-4.723-2.296-1.028-1.366-1.542-3.076-1.542-5.131 0-1.932.556-3.556 1.668-4.879 1.174-1.403 2.718-2.107 4.627-2.107 1.909 0 3.463.704 4.66 2.107 1.111 1.323 1.668 2.947 1.668 4.879z"></path><path fill="#FFD845" d="M102.407 118.845h-2.299v-9.376c0-1.028-.31-1.831-.928-2.409-.619-.576-1.443-.855-2.472-.833-1.091.021-2.13.378-3.116 1.069v11.549h-2.299v-11.833c1.323-.963 2.54-1.592 3.652-1.886 1.049-.274 1.974-.41 2.771-.41.545 0 1.059.053 1.542.158.903.209 1.637.596 2.203 1.164.631.629.946 1.384.946 2.267v10.54z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("C", 6, '<svg viewBox="0 0 128 128"><path fill="#659AD3" d="M115.4 30.7l-48.3-27.8c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4v-55.7c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path><path fill="#fff" d="M85.3 76.1c-4.2 7.4-12.2 12.4-21.3 12.4-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("android", 7, '<svg viewBox="0 0 128 128"><path fill="#fff" d="M21.012 91.125c-5.538.003-10.038-4.503-10.039-10.04l-.002-30.739c-.002-5.532 4.497-10.037 10.028-10.038 2.689-.002 5.207 1.041 7.105 2.937s2.942 4.418 2.944 7.099l-.003 30.74c.007 2.679-1.034 5.199-2.931 7.094-1.892 1.9-4.417 2.946-7.102 2.947M21.004 43.005c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736c.001 4.064 3.292 7.344 7.341 7.348 4.057-.005 7.343-3.285 7.339-7.347v-30.741c-.002-4.049-3.291-7.339-7.346-7.337"></path><path fill="#fff" d="M99.742 44.527l-2.698-.001-66.119.009-2.699.001-.002-2.699c-.006-11.08 6.03-21.385 15.917-27.473l-3.844-7.017c-.47-.822-.588-1.863-.314-2.815.278-.952.935-1.771 1.814-2.239.509-.288 1.131-.448 1.759-.447 1.362 0 2.609.739 3.267 1.933l4.023 7.329c4.163-1.527 8.558-2.306 13.099-2.305 4.606-.002 9.023.777 13.204 2.311l4.017-7.341c.647-1.191 1.903-1.933 3.263-1.932.612-.001 1.223.148 1.761.438.903.495 1.533 1.286 1.81 2.245.276.953.165 1.959-.318 2.832l-3.842 7.013c9.871 6.101 15.9 16.398 15.899 27.459l.003 2.699zM80.196 15.403l5.123-9.355c.273-.489.095-1.115-.399-1.386-.501-.271-1.119-.086-1.384.405l-5.176 9.45c-4.354-1.934-9.229-3.021-14.382-3.016-5.142-.005-10.008 1.078-14.349 3.005l-5.181-9.429c-.267-.497-.891-.679-1.379-.405-.497.266-.68.891-.403 1.379l5.125 9.348c-10.07 5.194-16.874 15.084-16.868 26.439l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427m-31.256 14.457c-1.521-.003-2.763-1.241-2.763-2.771 0-1.523 1.24-2.774 2.766-2.774 1.533-.001 2.773 1.251 2.775 2.774.001 1.528-1.242 2.77-2.778 2.771m30.107-.006c-1.528.002-2.775-1.235-2.772-2.771 0-1.521 1.242-2.772 2.773-2.778 1.521.005 2.768 1.258 2.767 2.779 0 1.531-1.241 2.771-2.768 2.77M51.711 126.159c-5.533-.001-10.036-4.501-10.037-10.038l-.002-13.567-2.638.003c-2.817.001-5.461-1.094-7.448-3.082-1.99-1.986-3.087-4.633-3.083-7.452l-.01-47.627v-2.701h2.699l65.623-.01 2.7-.002v2.699l.007 47.633c.001 5.809-4.725 10.536-10.532 10.535l-2.654.002.003 13.562c0 5.534-4.502 10.039-10.033 10.039-2.681.006-5.197-1.036-7.098-2.937-1.901-1.896-2.948-4.416-2.947-7.096v-13.568h-4.511v13.565c-.002 5.535-4.503 10.043-10.039 10.042"></path><path fill="#fff" d="M31.205 92.022c-.004 4.337 3.497 7.838 7.831 7.837h5.333l.006 16.264c-.001 4.05 3.289 7.341 7.335 7.342 4.056 0 7.342-3.295 7.338-7.348l.001-16.259 9.909-.003-.001 16.263c.004 4.051 3.298 7.346 7.343 7.338 4.056.003 7.344-3.292 7.343-7.344l-.005-16.259 5.353-.001c4.319.001 7.832-3.508 7.832-7.837l-.009-47.635-65.621.012.012 47.63zM106.996 91.112c-5.536.001-10.039-4.498-10.038-10.036l-.008-30.738c.002-5.537 4.498-10.041 10.031-10.041 5.54-.001 10.046 4.502 10.045 10.038l.003 30.736c.001 5.534-4.498 10.042-10.033 10.041M106.986 42.996c-4.053-.004-7.337 3.287-7.337 7.342l.003 30.737c.002 4.059 3.286 7.343 7.342 7.34 4.054-.001 7.335-3.281 7.338-7.343l-.008-30.736c-.001-4.056-3.283-7.342-7.338-7.34"></path><path fill="#A4C439" d="M21.004 43.005c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736c.001 4.064 3.288 7.344 7.342 7.343 4.056 0 7.342-3.28 7.338-7.342v-30.741c-.002-4.049-3.291-7.339-7.346-7.337m59.192-27.602l5.123-9.355c.273-.489.094-1.111-.401-1.388-.5-.265-1.117-.085-1.382.407l-5.175 9.453c-4.354-1.938-9.227-3.024-14.383-3.019-5.142-.005-10.013 1.078-14.349 3.005l-5.181-9.429c-.269-.497-.889-.677-1.378-.406-.498.269-.681.892-.404 1.38l5.125 9.349c-10.07 5.193-16.874 15.083-16.868 26.438l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427m-31.256 14.457c-1.521-.003-2.763-1.241-2.763-2.771 0-1.523 1.238-2.775 2.766-2.774 1.533-.001 2.773 1.251 2.775 2.774.001 1.528-1.242 2.77-2.778 2.771m30.107-.006c-1.528.002-2.772-1.237-2.772-2.771.006-1.52 1.242-2.772 2.773-2.778 1.521.005 2.768 1.258 2.767 2.779.002 1.531-1.241 2.771-2.768 2.77m-47.854 14.538l.011 47.635c-.003 4.333 3.502 7.831 7.832 7.831l5.333.002.006 16.264c-.001 4.05 3.291 7.342 7.335 7.342 4.056 0 7.342-3.295 7.343-7.347l-.004-16.26 9.909-.003.004 16.263c0 4.047 3.293 7.346 7.338 7.338 4.056.003 7.344-3.292 7.343-7.344l-.005-16.259 5.352-.004c4.32.002 7.834-3.5 7.836-7.834l-.009-47.635-65.624.011zm83.134 5.943c-.001-4.055-3.286-7.341-7.341-7.339-4.053-.004-7.337 3.287-7.337 7.342l.006 30.738c-.001 4.058 3.283 7.338 7.339 7.339 4.054-.001 7.337-3.281 7.338-7.343l-.005-30.737z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("mysql", 7, '<svg viewBox="0 0 128 128"><path fill="#00618A" d="M2.001 90.458h4.108v-16.223l6.36 14.143c.75 1.712 1.777 2.317 3.792 2.317s3.003-.605 3.753-2.317l6.36-14.143v16.223h4.108v-16.196c0-1.58-.632-2.345-1.936-2.739-3.121-.974-5.215-.131-6.163 1.976l-6.241 13.958-6.043-13.959c-.909-2.106-3.042-2.949-6.163-1.976-1.304.395-1.936 1.159-1.936 2.739v16.197zM33.899 77.252h4.107v8.938c-.038.485.156 1.625 2.406 1.661 1.148.018 8.862 0 8.934 0v-10.643h4.117c.019 0-.004 14.514-.004 14.574.022 3.58-4.441 4.357-6.499 4.417h-12.972v-2.764c.022 0 12.963.003 12.995-.001 2.645-.279 2.332-1.593 2.331-2.035v-1.078h-8.731c-4.062-.037-6.65-1.81-6.683-3.85-.002-.187.089-9.129-.001-9.219z"></path><path fill="#E48E00" d="M56.63 90.458h11.812c1.383 0 2.727-.289 3.793-.789 1.777-.816 2.646-1.922 2.646-3.372v-3.002c0-1.185-.987-2.292-2.923-3.028-1.027-.396-2.292-.605-3.517-.605h-4.978c-1.659 0-2.449-.5-2.646-1.606-.039-.132-.039-.237-.039-.369v-1.87c0-.105 0-.211.039-.342.197-.843.632-1.08 2.094-1.212l.395-.026h11.733v-2.738h-11.535c-1.659 0-2.528.105-3.318.342-2.449.764-3.517 1.975-3.517 4.082v2.396c0 1.844 2.095 3.424 5.61 3.793.396.025.79.053 1.185.053h4.267c.158 0 .316 0 .435.025 1.304.105 1.856.343 2.252.816.237.237.315.475.315.737v2.397c0 .289-.197.658-.592.974-.355.316-.948.527-1.738.58l-.435.026h-11.338v2.738zM100.511 85.692c0 2.817 2.094 4.397 6.32 4.714.395.026.79.052 1.185.052h10.706v-2.738h-10.784c-2.41 0-3.318-.606-3.318-2.055v-14.168h-4.108v14.195zM77.503 85.834v-9.765c0-2.48 1.742-3.985 5.186-4.46.356-.053.753-.079 1.108-.079h7.799c.396 0 .752.026 1.147.079 3.444.475 5.187 1.979 5.187 4.46v9.765c0 2.014-.74 3.09-2.445 3.792l4.048 3.653h-4.771l-3.274-2.956-3.296.209h-4.395c-.752 0-1.543-.105-2.414-.343-2.613-.712-3.88-2.085-3.88-4.355zm4.434-.237c0 .132.039.265.079.423.237 1.135 1.307 1.768 2.929 1.768h3.732l-3.428-3.095h4.771l2.989 2.7c.552-.295.914-.743 1.041-1.32.039-.132.039-.264.039-.396v-9.368c0-.105 0-.238-.039-.37-.238-1.056-1.307-1.662-2.89-1.662h-6.216c-1.82 0-3.008.792-3.008 2.032v9.288z"></path><path fill="#00618A" d="M122.336 66.952c-2.525-.069-4.454.166-6.104.861-.469.198-1.216.203-1.292.79.257.271.297.674.502 1.006.394.637 1.059 1.491 1.652 1.938.647.489 1.315 1.013 2.011 1.437 1.235.754 2.615 1.184 3.806 1.938.701.446 1.397 1.006 2.082 1.509.339.247.565.634 1.006.789v-.071c-.231-.294-.291-.698-.503-1.006l-.934-.934c-.913-1.212-2.071-2.275-3.304-3.159-.982-.705-3.18-1.658-3.59-2.801l-.072-.071c.696-.079 1.512-.331 2.154-.503 1.08-.29 2.045-.215 3.16-.503l1.508-.432v-.286c-.563-.578-.966-1.344-1.58-1.867-1.607-1.369-3.363-2.737-5.17-3.879-1.002-.632-2.241-1.043-3.304-1.579-.356-.181-.984-.274-1.221-.575-.559-.711-.862-1.612-1.293-2.441-.9-1.735-1.786-3.631-2.585-5.458-.544-1.245-.9-2.473-1.579-3.59-3.261-5.361-6.771-8.597-12.208-11.777-1.157-.677-2.55-.943-4.021-1.292l-2.37-.144c-.481-.201-.983-.791-1.436-1.077-1.802-1.138-6.422-3.613-7.756-.358-.842 2.054 1.26 4.058 2.011 5.099.527.73 1.203 1.548 1.58 2.369.248.54.29 1.081.503 1.652.521 1.406.976 2.937 1.651 4.236.341.658.718 1.351 1.149 1.939.264.36.718.52.789 1.077-.443.62-.469 1.584-.718 2.369-1.122 3.539-.699 7.938.934 10.557.501.805 1.681 2.529 3.303 1.867 1.419-.578 1.103-2.369 1.509-3.95.092-.357.035-.621.215-.861v.072l1.293 2.585c.957 1.541 2.654 3.15 4.093 4.237.746.563 1.334 1.538 2.298 1.867v-.073h-.071c-.188-.291-.479-.411-.719-.646-.562-.551-1.187-1.235-1.651-1.867-1.309-1.776-2.465-3.721-3.519-5.745-.503-.966-.94-2.032-1.364-3.016-.164-.379-.162-.953-.502-1.148-.466.72-1.149 1.303-1.509 2.154-.574 1.36-.648 3.019-.861 4.739l-.144.071c-1.001-.241-1.352-1.271-1.724-2.154-.94-2.233-1.115-5.83-.287-8.401.214-.666 1.181-2.761.789-3.376-.187-.613-.804-.967-1.148-1.437-.427-.579-.854-1.341-1.149-2.011-.77-1.741-1.129-3.696-1.938-5.457-.388-.842-1.042-1.693-1.58-2.441-.595-.83-1.262-1.44-1.724-2.442-.164-.356-.387-.927-.144-1.293.077-.247.188-.35.432-.431.416-.321 1.576.107 2.01.287 1.152.479 2.113.934 3.089 1.58.468.311.941.911 1.508 1.077h.646c1.011.232 2.144.071 3.088.358 1.67.508 3.166 1.297 4.524 2.155 4.139 2.614 7.522 6.334 9.838 10.772.372.715.534 1.396.861 2.154.662 1.528 1.496 3.101 2.154 4.596.657 1.491 1.298 2.996 2.227 4.237.488.652 2.374 1.002 3.231 1.364.601.254 1.585.519 2.154.861 1.087.656 2.141 1.437 3.16 2.155.509.362 2.076 1.149 2.154 1.798zM90.237 39.593c-.526-.01-.899.058-1.293.144v.071h.072c.251.517.694.849 1.005 1.293l.719 1.508.071-.071c.445-.313.648-.814.646-1.58-.179-.188-.205-.423-.359-.646-.204-.3-.602-.468-.861-.719z"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("typescript", 6, '<svg viewBox="0 0 128 128"><path id="original-2" data-name="original" class="cls-2" d="M1.5,63.91v62.5h125V1.41H1.5Zm100.73-5a15.56,15.56,0,0,1,7.82,4.5,20.58,20.58,0,0,1,3,4c0,.16-5.4,3.81-8.69,5.85-.12.08-.6-.44-1.13-1.23a7.09,7.09,0,0,0-5.87-3.53c-3.79-.26-6.23,1.73-6.21,5a4.58,4.58,0,0,0,.54,2.34c.83,1.73,2.38,2.76,7.24,4.86,8.95,3.85,12.78,6.39,15.16,10,2.66,4,3.25,10.46,1.45,15.24-2,5.2-6.9,8.73-13.83,9.9a38.32,38.32,0,0,1-9.52-.1,23,23,0,0,1-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34,9.34,0,0,1,1.15-.73L82,101l3.59-2.08.75,1.11a16.78,16.78,0,0,0,4.74,4.54c4,2.1,9.46,1.81,12.16-.62a5.43,5.43,0,0,0,.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48,16.48,0,0,1-3.43-6.25,25,25,0,0,1-.22-8c1.33-6.23,6-10.58,12.82-11.87A31.66,31.66,0,0,1,102.23,58.93ZM72.89,64.15l0,5.12H56.66V115.5H45.15V69.26H28.88v-5A49.19,49.19,0,0,1,29,59.09C29.08,59,39,59,51,59L72.83,59Z"></path></svg>')
         ];
         this.framework = [
             new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("angular", 3, '<svg viewBox="0 0 128 128"><path fill="#B3B3B3" d="M63.81 1.026l-59.257 20.854 9.363 77.637 49.957 27.457 50.214-27.828 9.36-77.635z"></path><path fill="#A6120D" d="M117.536 25.998l-53.864-18.369v112.785l45.141-24.983z"></path><path fill="#DD1B16" d="M11.201 26.329l8.026 69.434 44.444 24.651v-112.787z"></path><path fill="#F2F2F2" d="M78.499 67.67l-14.827 6.934h-15.628l-7.347 18.374-13.663.254 36.638-81.508 14.827 55.946zm-1.434-3.491l-13.295-26.321-10.906 25.868h10.807l13.394.453z"></path><path fill="#B3B3B3" d="M63.671 11.724l.098 26.134 12.375 25.888h-12.446l-.027 10.841 17.209.017 8.042 18.63 13.074.242z"></path></svg>'),
             new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("bootstrap", 4, '<svg viewBox="0 0 128 128"><path fill="#5B4282" d="M9.531 112.586h4.161c1.896 0 3.273.27 4.129.81.857.54 1.285 1.398 1.285 2.575 0 .799-.188 1.454-.563 1.966s-.874.82-1.496.924v.091c.848.189 1.459.543 1.834 1.061s.563 1.207.563 2.067c0 1.22-.44 2.171-1.322 2.854-.881.683-2.078 1.024-3.59 1.024h-5.001v-13.372zm2.835 5.296h1.646c.768 0 1.325-.119 1.669-.356.345-.238.517-.631.517-1.18 0-.512-.187-.879-.562-1.102s-.968-.334-1.779-.334h-1.491v2.972zm0 2.25v3.485h1.848c.78 0 1.356-.149 1.729-.448s.558-.756.558-1.372c0-1.109-.793-1.665-2.378-1.665h-1.757zM34.252 119.254c0 2.213-.549 3.915-1.646 5.104s-2.67 1.784-4.719 1.784-3.622-.595-4.719-1.784c-1.098-1.189-1.646-2.896-1.646-5.122s.55-3.925 1.651-5.099 2.678-1.761 4.733-1.761 3.626.592 4.715 1.774c1.087 1.183 1.631 2.885 1.631 5.104zm-9.758 0c0 1.494.283 2.619.851 3.375.567.756 1.414 1.134 2.542 1.134 2.262 0 3.393-1.503 3.393-4.509 0-3.012-1.125-4.518-3.375-4.518-1.128 0-1.979.379-2.552 1.139s-.859 1.885-.859 3.379zM49.161 119.254c0 2.213-.549 3.915-1.646 5.104s-2.67 1.784-4.719 1.784-3.622-.595-4.719-1.784c-1.098-1.189-1.646-2.896-1.646-5.122s.55-3.925 1.651-5.099 2.678-1.761 4.733-1.761 3.626.592 4.715 1.774c1.086 1.183 1.631 2.885 1.631 5.104zm-9.759 0c0 1.494.283 2.619.851 3.375.567.756 1.414 1.134 2.542 1.134 2.262 0 3.393-1.503 3.393-4.509 0-3.012-1.125-4.518-3.375-4.518-1.128 0-1.979.379-2.552 1.139s-.859 1.885-.859 3.379zM57.09 125.958h-2.835v-11.012h-3.631v-2.36h10.097v2.36h-3.631v11.012zM70.671 122.245c0 1.208-.434 2.159-1.303 2.854-.869.695-2.078 1.043-3.626 1.043-1.427 0-2.689-.269-3.786-.805v-2.634c.902.402 1.666.686 2.291.851s1.196.247 1.715.247c.622 0 1.099-.119 1.431-.356.333-.238.499-.591.499-1.061 0-.262-.073-.495-.219-.7-.146-.204-.361-.401-.645-.59s-.861-.491-1.733-.905c-.817-.384-1.43-.753-1.838-1.107-.409-.354-.735-.765-.979-1.234-.244-.47-.366-1.019-.366-1.646 0-1.183.401-2.113 1.203-2.79s1.91-1.015 3.325-1.015c.695 0 1.358.082 1.989.247.631.165 1.291.396 1.98.695l-.915 2.204c-.713-.292-1.303-.497-1.77-.613-.467-.116-.925-.174-1.376-.174-.537 0-.948.125-1.235.375-.287.25-.43.576-.43.979 0 .25.058.468.174.654.116.186.3.366.553.54.253.174.852.486 1.797.938 1.25.598 2.107 1.197 2.57 1.797s.694 1.334.694 2.206zM78.254 125.958h-2.835v-11.012h-3.631v-2.36h10.097v2.36h-3.631v11.012zM86.778 120.827v5.131h-2.835v-13.372h3.896c1.817 0 3.161.331 4.033.992.872.662 1.308 1.667 1.308 3.014 0 .787-.216 1.486-.649 2.099s-1.046 1.093-1.838 1.44c2.012 3.006 3.323 4.948 3.933 5.826h-3.146l-3.192-5.131h-1.51zm0-2.305h.915c.896 0 1.558-.149 1.985-.448s.64-.769.64-1.409c0-.634-.218-1.085-.654-1.354-.436-.268-1.111-.402-2.026-.402h-.86v3.613zM104.494 125.958l-.97-3.183h-4.875l-.97 3.183h-3.055l4.719-13.426h3.466l4.738 13.426h-3.053zm-1.647-5.561c-.896-2.884-1.401-4.515-1.514-4.893-.113-.378-.193-.677-.242-.896-.201.78-.777 2.71-1.729 5.789h3.485zM118.469 116.757c0 1.439-.45 2.54-1.349 3.301-.899.763-2.178 1.144-3.837 1.144h-1.216v4.756h-2.835v-13.372h4.271c1.622 0 2.855.349 3.7 1.047.844.699 1.266 1.74 1.266 3.124zm-6.402 2.122h.933c.872 0 1.524-.172 1.957-.517.433-.345.649-.846.649-1.504 0-.665-.182-1.156-.544-1.473-.363-.317-.932-.476-1.706-.476h-1.29v3.97zM73.951 56.759c-1.983-.653-4.838-.759-8.565-.759h-13.386v20h14.424c2.502 0 4.259-.249 5.271-.437 1.783-.318 3.274-.93 4.472-1.676 1.198-.744 2.183-1.869 2.955-3.293.771-1.424 1.158-3.087 1.158-4.951 0-2.184-.559-3.98-1.677-5.59-1.117-1.611-2.668-2.642-4.652-3.294zM71.895 48.147c1.97-.586 3.455-1.646 4.452-3.003.999-1.357 1.498-3.103 1.498-5.154 0-1.943-.466-3.675-1.398-5.154-.932-1.478-2.263-2.481-3.992-3.027-1.732-.544-4.7-.809-8.906-.809h-11.549v18h12.507c3.435 0 5.897-.399 7.388-.853zM117 16.126c0-7.802-6.325-14.126-14.127-14.126h-77.746c-7.802 0-14.127 6.324-14.127 14.126v77.748c0 7.802 6.325 14.126 14.127 14.126h77.746c7.802 0 14.127-6.324 14.127-14.126v-77.748zm-30.43 57.144c-1.157 2.356-2.589 4.173-4.292 5.451-1.704 1.277-3.841 2.446-6.41 3.098-2.569.653-5.717 1.181-9.444 1.181h-22.424v-59h22.065c4.473 0 8.059.62 10.761 1.804 2.703 1.185 4.818 3.021 6.351 5.483 1.53 2.463 2.296 5.046 2.296 7.735 0 2.502-.68 4.861-2.036 7.071-1.358 2.21-3.408 3.995-6.15 5.352 3.54 1.038 6.263 2.811 8.166 5.313 1.903 2.503 2.855 5.458 2.855 8.866-.001 2.742-.579 5.291-1.738 7.646z"></path></svg>'),
-            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("node", 4, '<svg viewBox="0 0 128 128"><path fill="#83CD29" d="M114.325 80.749c-.29 0-.578-.076-.832-.224l-2.65-1.568c-.396-.221-.203-.3-.072-.345.528-.184.635-.227 1.198-.545.059-.033.136-.021.197.015l2.035 1.209c.074.041.179.041.246 0l7.937-4.581c.075-.042.122-.127.122-.215v-9.16c0-.09-.047-.173-.123-.219l-7.934-4.577c-.074-.042-.171-.042-.245 0l-7.933 4.578c-.076.045-.125.131-.125.218v9.16c0 .088.049.171.125.212l2.174 1.257c1.18.589 1.903-.105 1.903-.803v-9.045c0-.127.103-.228.23-.228h1.007c.125 0 .229.101.229.228v9.045c0 1.574-.857 2.477-2.35 2.477-.459 0-.82 0-1.828-.496l-2.081-1.198c-.515-.298-.832-.854-.832-1.448v-9.16c0-.595.317-1.15.832-1.446l7.937-4.587c.502-.283 1.169-.283 1.667 0l7.937 4.587c.514.297.833.852.833 1.446v9.16c0 .595-.319 1.148-.833 1.448l-7.937 4.582c-.252.147-.539.223-.834.223M116.778 74.438c-3.475 0-4.202-1.595-4.202-2.932 0-.126.103-.229.23-.229h1.026c.115 0 .21.082.228.194.154 1.045.617 1.572 2.718 1.572 1.671 0 2.383-.378 2.383-1.266 0-.512-.202-.891-2.8-1.146-2.172-.215-3.515-.694-3.515-2.433 0-1.601 1.35-2.557 3.612-2.557 2.543 0 3.801.883 3.96 2.777.006.064-.017.127-.06.176-.044.045-.104.073-.168.073h-1.031c-.107 0-.201-.075-.223-.179-.248-1.1-.848-1.451-2.479-1.451-1.825 0-2.037.637-2.037 1.112 0 .577.25.745 2.715 1.071 2.439.323 3.598.779 3.598 2.494.001 1.733-1.441 2.724-3.955 2.724"></path><path fill="#404137" d="M97.982 68.43c.313-.183.506-.517.506-.88v-2.354c0-.362-.192-.696-.506-.879l-8.364-4.856c-.315-.183-.703-.184-1.019-.002l-8.416 4.859c-.314.182-.508.517-.508.88v9.716c0 .365.196.703.514.884l8.363 4.765c.308.177.686.178.997.006l5.058-2.812c.161-.09.261-.258.262-.44.001-.184-.097-.354-.256-.445l-8.468-4.86c-.159-.091-.256-.259-.256-.44v-3.046c0-.182.097-.349.254-.439l2.637-1.52c.156-.091.35-.091.507 0l2.637 1.52c.158.091.255.258.255.439v2.396c0 .183.097.351.254.441.158.091.352.091.51-.001l5.039-2.932"></path><path fill="#83CD29" d="M88.984 67.974c.061-.034.135-.034.195 0l1.615.933c.06.035.097.1.097.169v1.865c0 .07-.037.134-.097.169l-1.615.932c-.06.035-.135.035-.195 0l-1.614-.932c-.061-.035-.098-.099-.098-.169v-1.865c0-.069.037-.134.098-.169l1.614-.933"></path><path fill="#404137" d="M67.083 71.854c0 .09-.048.174-.127.22l-2.89 1.666c-.079.046-.176.046-.254 0l-2.89-1.666c-.079-.046-.127-.13-.127-.22v-3.338c0-.09.049-.175.127-.221l2.89-1.668c.079-.047.176-.047.255 0l2.891 1.668c.078.046.126.131.126.221v3.338zm.781-24.716c-.157-.087-.349-.085-.505.006-.155.092-.251.258-.251.438v12.915c0 .126-.068.244-.177.308-.11.063-.246.063-.356 0l-2.108-1.215c-.314-.181-.701-.181-1.015 0l-8.418 4.858c-.315.182-.509.518-.509.881v9.719c0 .363.194.698.508.881l8.418 4.861c.314.182.702.182 1.017 0l8.42-4.861c.314-.183.508-.518.508-.881v-24.227c0-.368-.2-.708-.521-.888l-5.011-2.795"></path><path fill="#83CD29" d="M38.238 59.407c.314-.182.702-.182 1.016 0l8.418 4.857c.314.182.508.518.508.881v9.722c0 .363-.194.699-.508.881l-8.417 4.861c-.314.181-.702.181-1.017 0l-8.415-4.861c-.314-.182-.508-.518-.508-.881v-9.723c0-.362.194-.698.508-.88l8.415-4.857"></path><path fill="#404137" d="M22.93 65.064c0-.366-.192-.702-.508-.883l-8.415-4.843c-.144-.084-.303-.127-.464-.133h-.087c-.16.006-.32.049-.464.133l-8.416 4.843c-.313.181-.509.517-.509.883l.018 13.04c0 .182.095.351.254.439.156.094.349.094.505 0l5-2.864c.316-.188.509-.519.509-.882v-6.092c0-.364.192-.699.507-.881l2.13-1.226c.158-.093.332-.137.508-.137.174 0 .352.044.507.137l2.128 1.226c.315.182.509.517.509.881v6.092c0 .363.195.696.509.882l5 2.864c.157.094.353.094.508 0 .155-.089.252-.258.252-.439l.019-13.04"></path></svg>')
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("nodejs", 4, '<svg viewBox="0 0 128 128"><path fill="#83CD29" d="M114.325 80.749c-.29 0-.578-.076-.832-.224l-2.65-1.568c-.396-.221-.203-.3-.072-.345.528-.184.635-.227 1.198-.545.059-.033.136-.021.197.015l2.035 1.209c.074.041.179.041.246 0l7.937-4.581c.075-.042.122-.127.122-.215v-9.16c0-.09-.047-.173-.123-.219l-7.934-4.577c-.074-.042-.171-.042-.245 0l-7.933 4.578c-.076.045-.125.131-.125.218v9.16c0 .088.049.171.125.212l2.174 1.257c1.18.589 1.903-.105 1.903-.803v-9.045c0-.127.103-.228.23-.228h1.007c.125 0 .229.101.229.228v9.045c0 1.574-.857 2.477-2.35 2.477-.459 0-.82 0-1.828-.496l-2.081-1.198c-.515-.298-.832-.854-.832-1.448v-9.16c0-.595.317-1.15.832-1.446l7.937-4.587c.502-.283 1.169-.283 1.667 0l7.937 4.587c.514.297.833.852.833 1.446v9.16c0 .595-.319 1.148-.833 1.448l-7.937 4.582c-.252.147-.539.223-.834.223M116.778 74.438c-3.475 0-4.202-1.595-4.202-2.932 0-.126.103-.229.23-.229h1.026c.115 0 .21.082.228.194.154 1.045.617 1.572 2.718 1.572 1.671 0 2.383-.378 2.383-1.266 0-.512-.202-.891-2.8-1.146-2.172-.215-3.515-.694-3.515-2.433 0-1.601 1.35-2.557 3.612-2.557 2.543 0 3.801.883 3.96 2.777.006.064-.017.127-.06.176-.044.045-.104.073-.168.073h-1.031c-.107 0-.201-.075-.223-.179-.248-1.1-.848-1.451-2.479-1.451-1.825 0-2.037.637-2.037 1.112 0 .577.25.745 2.715 1.071 2.439.323 3.598.779 3.598 2.494.001 1.733-1.441 2.724-3.955 2.724"></path><path fill="#404137" d="M97.982 68.43c.313-.183.506-.517.506-.88v-2.354c0-.362-.192-.696-.506-.879l-8.364-4.856c-.315-.183-.703-.184-1.019-.002l-8.416 4.859c-.314.182-.508.517-.508.88v9.716c0 .365.196.703.514.884l8.363 4.765c.308.177.686.178.997.006l5.058-2.812c.161-.09.261-.258.262-.44.001-.184-.097-.354-.256-.445l-8.468-4.86c-.159-.091-.256-.259-.256-.44v-3.046c0-.182.097-.349.254-.439l2.637-1.52c.156-.091.35-.091.507 0l2.637 1.52c.158.091.255.258.255.439v2.396c0 .183.097.351.254.441.158.091.352.091.51-.001l5.039-2.932"></path><path fill="#83CD29" d="M88.984 67.974c.061-.034.135-.034.195 0l1.615.933c.06.035.097.1.097.169v1.865c0 .07-.037.134-.097.169l-1.615.932c-.06.035-.135.035-.195 0l-1.614-.932c-.061-.035-.098-.099-.098-.169v-1.865c0-.069.037-.134.098-.169l1.614-.933"></path><path fill="#404137" d="M67.083 71.854c0 .09-.048.174-.127.22l-2.89 1.666c-.079.046-.176.046-.254 0l-2.89-1.666c-.079-.046-.127-.13-.127-.22v-3.338c0-.09.049-.175.127-.221l2.89-1.668c.079-.047.176-.047.255 0l2.891 1.668c.078.046.126.131.126.221v3.338zm.781-24.716c-.157-.087-.349-.085-.505.006-.155.092-.251.258-.251.438v12.915c0 .126-.068.244-.177.308-.11.063-.246.063-.356 0l-2.108-1.215c-.314-.181-.701-.181-1.015 0l-8.418 4.858c-.315.182-.509.518-.509.881v9.719c0 .363.194.698.508.881l8.418 4.861c.314.182.702.182 1.017 0l8.42-4.861c.314-.183.508-.518.508-.881v-24.227c0-.368-.2-.708-.521-.888l-5.011-2.795"></path><path fill="#83CD29" d="M38.238 59.407c.314-.182.702-.182 1.016 0l8.418 4.857c.314.182.508.518.508.881v9.722c0 .363-.194.699-.508.881l-8.417 4.861c-.314.181-.702.181-1.017 0l-8.415-4.861c-.314-.182-.508-.518-.508-.881v-9.723c0-.362.194-.698.508-.88l8.415-4.857"></path><path fill="#404137" d="M22.93 65.064c0-.366-.192-.702-.508-.883l-8.415-4.843c-.144-.084-.303-.127-.464-.133h-.087c-.16.006-.32.049-.464.133l-8.416 4.843c-.313.181-.509.517-.509.883l.018 13.04c0 .182.095.351.254.439.156.094.349.094.505 0l5-2.864c.316-.188.509-.519.509-.882v-6.092c0-.364.192-.699.507-.881l2.13-1.226c.158-.093.332-.137.508-.137.174 0 .352.044.507.137l2.128 1.226c.315.182.509.517.509.881v6.092c0 .363.195.696.509.882l5 2.864c.157.094.353.094.508 0 .155-.089.252-.258.252-.439l.019-13.04"></path></svg>'),
+            new __WEBPACK_IMPORTED_MODULE_2__models_language_language__["a" /* Language */]("Spring(java)", 4, '<svg viewBox="0 0 128 128"><path fill:#77bc1f d="M208.36,61c-2.28-15.29-7-32.54-13.39-51.64A75.79,75.79,0,0,1,186.19,25,82.37,82.37,0,0,0,56.42,40.1,54.57,54.57,0,0,1,90.09,54.25a56.91,56.91,0,0,0-31.81-9.38,58.28,58.28,0,0,0,0,116.57h134.4A51.42,51.42,0,0,0,208.36,61ZM82.79,143.47a7,7,0,1,1-1-9.91A7,7,0,0,1,82.79,143.47Zm111.83-24.68c-20.34,27.09-63.76,18-91.61,19.26,0,0-4.93.28-9.9,1.1,0,0,1.88-.8,4.28-1.63,19.55-6.76,28.8-8.12,40.69-14.23,22.32-11.44,44.55-36.35,49.06-62.23-8.5,24.9-34.35,46.32-57.88,55C113.14,122,84,127.8,84,127.81l-1.18-.63C63,117.54,62.45,74.63,98.43,60.8c15.78-6.07,30.87-2.73,47.92-6.8,18.19-4.32,39.25-18,47.81-35.79C203.77,46.69,215.3,91.24,194.62,118.79Z"/></svg>')
         ];
+        this.segments = ['Home', 'Skill'],
+            this.segment = this.segments[0];
+        this.hide = true;
+        this.gitRepositoriesHttp = this.httpClient.get('https://api.github.com/users/mttslv/repos');
+        this.gitRepositoriesHttp.forEach(function (repository) {
+            _this.gitRepositories = repository;
+            console.log(_this.gitRepositories);
+        });
     }
+    HomePage.prototype.segmentChanged = function ($event) {
+        console.log("change segment");
+        this.content.scrollToTop();
+    };
+    HomePage.prototype.receiveMessage = function ($event) {
+        this.hide = $event;
+        //force update
+        this.ref.detectChanges();
+    };
+    HomePage.prototype.httpRequest = function () {
+        var _this = this;
+        console.log(this.gitRepositoriesHttp);
+        this.gitRepositoriesHttp.forEach(function (repository) {
+            _this.gitRepositories.push("repository");
+            console.log("/////////////////////////////////////////");
+            console.log(repository);
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* Content */])
+    ], HomePage.prototype, "content", void 0);
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\pages\home\home.html"*/'<ion-header>\n  \n  <shrinking-header [scrollArea]="myContent" headerHeight="230" (messageEvent)="receiveMessage($event)">\n      <img id="imgHeader" *ngIf="hide" src="../../assets/imgs/profilo.jpg" />\n      <div id="headerContent" *ngIf="hide">\n      <h1>Matteo Silvi</h1>\n      <h6>\n          Full Stack Developer\n      </h6>\n    </div>\n  </shrinking-header>\n\n  <ion-toolbar id="toolbar">\n    <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)">\n      <ion-segment-button value="{{segments[0]}}">\n          <ion-icon name="camera"></ion-icon>\n      </ion-segment-button>\n      <ion-segment-button value="{{segments[1]}}">\n          {{segments[1]}}\n      </ion-segment-button>\n    </ion-segment>\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding fullscreen #myContent>\n  \n  <div [ngSwitch]="segment">\n    <div *ngSwitchCase="segments[0]">\n      <ion-grid>    \n      <ion-row>\n              \n              <ion-col col-12 col-sm-12 col-md-6>\n                <segment-home-profile></segment-home-profile>  \n              </ion-col>\n        \n              <ion-col col-12 col-sm-12 col-md-6 >\n        \n                  <!-- effect=\'flip\' -->\n                <ion-slides pager>  \n                    \n                  <ion-slide>\n                      <ion-card>\n                        <ion-card-header>\n                          Language\n                        </ion-card-header>\n                        <ion-card-content>\n                          <ion-grid>\n                            <ion-row >\n                              <ion-col col-12>\n                                <radar-chart [data]="languages"></radar-chart>\n                              </ion-col>\n                            </ion-row>\n                          </ion-grid>\n                        </ion-card-content>\n                      </ion-card>\n                    </ion-slide>\n        \n                    <ion-slide >\n                      <ion-card >\n                        <ion-card-header>\n                          Framework\n                        </ion-card-header>\n                        <ion-card-content>\n                          <ion-grid >\n                            <ion-row > \n                              <ion-col col-12>\n                                <radar-chart [data]="framework"></radar-chart>\n                              </ion-col>\n                            </ion-row>\n                          </ion-grid>\n                        </ion-card-content>\n                      </ion-card>\n                    </ion-slide>\n                    \n                  </ion-slides>\n                </ion-col>\n            </ion-row>\n            <ion-row>\n              <ion-col *ngFor="let repo of gitRepositories" col-4>\n                  <ion-card >\n                      <ion-card-header>\n                        <ion-row>\n                          <a href="{{repo.svn_url}}" target="_blank">{{repo.name}}</a>\n                        </ion-row>\n                        <ion-row>\n                          <div><ion-icon name="star"> {{repo.stargazers_count}} </ion-icon></div>\n                          <div><ion-icon name="eye"> {{repo.watchers_count}} </ion-icon> </div>\n                          <div><ion-icon name="git-branch"> {{repo.forks_count}} </ion-icon></div>  \n                        </ion-row>\n                      </ion-card-header>\n                      <ion-card-content>\n                          {{repo}}\n                      </ion-card-content>\n                  </ion-card>    \n              </ion-col>\n            </ion-row>\n          </ion-grid>\n    </div>\n\n    <div *ngSwitchCase="segments[1]">\n        <button ion-button (click)="httpRequest()">Default</button>\n    </div>\n    \n  </div>\n  \n</ion-content>\n<!-- <ion-footer>\n    <ion-toolbar>\n      <ion-title>Footer</ion-title>\n    </ion-toolbar>\n  </ion-footer> -->\n\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ChangeDetectorRef"], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
+    ], HomePage);
     return HomePage;
 }());
-HomePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid>\n    <ion-row>\n      \n      <ion-col col-12 col-sm-12 col-md-6>\n        \n        <ion-card>\n          <ion-card-header>\n           About Me\n          </ion-card-header>\n          <ion-card-content>\n               \n          </ion-card-content>\n        </ion-card>\n      </ion-col>\n\n      <ion-col col-12 col-sm-12 col-md-6 >\n\n          <!-- effect=\'flip\' -->\n        <ion-slides pager >  \n            \n          <ion-slide>\n              <ion-card>\n                <ion-card-header>\n                  Language\n                </ion-card-header>\n                <ion-card-content>\n                  <ion-grid>\n                    <ion-row >\n                      <ion-col col-12>\n                        <radar-chart [data]="languages"></radar-chart>\n                      </ion-col>\n                    </ion-row>\n                  </ion-grid>\n                </ion-card-content>\n              </ion-card>\n            </ion-slide>\n\n            <ion-slide >\n              <ion-card >\n                <ion-card-header>\n                  Framework\n                </ion-card-header>\n                <ion-card-content>\n                  <ion-grid >\n                    <ion-row > \n                      <ion-col col-12>\n                        <radar-chart [data]="framework"></radar-chart>\n                      </ion-col>\n                    </ion-row>\n                  </ion-grid>\n                </ion-card-content>\n              </ion-card>\n            </ion-slide>\n          \n          </ion-slides>\n        </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\pages\home\home.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
-], HomePage);
 
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 324:
+/***/ 335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(325);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(343);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(357);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -308,31 +139,33 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 343:
+/***/ 357:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(384);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_charts__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__ = __webpack_require__(446);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__ = __webpack_require__(447);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_charts__ = __webpack_require__(414);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_http__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_shrinking_header_shrinking_header__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__ = __webpack_require__(466);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_segment_home_profile_segment_home_profile__ = __webpack_require__(467);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -349,58 +182,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__components_shrinking_header_shrinking_header__["a" /* ShrinkingHeader */],
+                __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__["a" /* RadarChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__["a" /* ComponentsItemSvgComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_segment_home_profile_segment_home_profile__["a" /* SegmentHomeProfile */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                    links: []
+                }),
+                __WEBPACK_IMPORTED_MODULE_7_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__["a" /* RadarChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__["a" /* ComponentsItemSvgComponent */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_http__["a" /* HTTP */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
+            ]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__["a" /* RadarChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__["a" /* ComponentsItemSvgComponent */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                links: []
-            }),
-            __WEBPACK_IMPORTED_MODULE_10_ng2_charts__["ChartsModule"]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_11__components_radar_chart_radar_chart__["a" /* RadarChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_components_item_svg_components_item_svg__["a" /* ComponentsItemSvgComponent */]
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
-        ]
-    })
-], AppModule);
 
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
-/***/ 384:
+/***/ 407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(205);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -417,7 +248,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -425,2229 +256,19 @@ var MyApp = (function () {
             splashScreen.hide();
         });
     }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\app\app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
     return MyApp;
 }());
-MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\app\app.html"*/'<ion-header>\n<ion-toolbar>\n  <ion-title>Toolbar</ion-title>\n</ion-toolbar>\n</ion-header>\n\n<ion-content>\n        <ion-nav [root]="rootPage"></ion-nav>        \n</ion-content>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\app\app.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-], MyApp);
 
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 393:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(106);
-/**
- * @author qiao / https://github.com/qiao
- * @author mrdoob / http://mrdoob.com
- * @author alteredq / http://alteredqualia.com/
- * @author WestLangley / http://github.com/WestLangley
- * @author erich666 / http://erichaines.com
- */
-
-// This set of controls performs orbiting, dollying (zooming), and panning.
-// Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
-//
-//    Orbit - left mouse / touch: one finger move
-//    Zoom - middle mouse, or mousewheel / touch: two finger spread or squish
-//    Pan - right mouse, or arrow keys / touch: three finger swipe
-
-
-__WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"] = function ( object, domElement ) {
-
-	this.object = object;
-
-	this.domElement = ( domElement !== undefined ) ? domElement : document;
-
-	// Set to false to disable this control
-	this.enabled = true;
-
-	// "target" sets the location of focus, where the object orbits around
-	this.target = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-	// How far you can dolly in and out ( PerspectiveCamera only )
-	this.minDistance = 0;
-	this.maxDistance = Infinity;
-
-	// How far you can zoom in and out ( OrthographicCamera only )
-	this.minZoom = 0;
-	this.maxZoom = Infinity;
-
-	// How far you can orbit vertically, upper and lower limits.
-	// Range is 0 to Math.PI radians.
-	this.minPolarAngle = 0; // radians
-	this.maxPolarAngle = Math.PI; // radians
-
-	// How far you can orbit horizontally, upper and lower limits.
-	// If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
-	this.minAzimuthAngle = - Infinity; // radians
-	this.maxAzimuthAngle = Infinity; // radians
-
-	// Set to true to enable damping (inertia)
-	// If damping is enabled, you must call controls.update() in your animation loop
-	this.enableDamping = false;
-	this.dampingFactor = 0.25;
-
-	// This option actually enables dollying in and out; left as "zoom" for backwards compatibility.
-	// Set to false to disable zooming
-	this.enableZoom = true;
-	this.zoomSpeed = 1.0;
-
-	// Set to false to disable rotating
-	this.enableRotate = true;
-	this.rotateSpeed = 1.0;
-
-	// Set to false to disable panning
-	this.enablePan = true;
-	this.keyPanSpeed = 7.0;	// pixels moved per arrow key push
-
-	// Set to true to automatically rotate around the target
-	// If auto-rotate is enabled, you must call controls.update() in your animation loop
-	this.autoRotate = false;
-	this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
-
-	// Set to false to disable use of the keys
-	this.enableKeys = true;
-
-	// The four arrow keys
-	this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
-
-	// Mouse buttons
-	this.mouseButtons = { ORBIT: __WEBPACK_IMPORTED_MODULE_0_three__["o" /* MOUSE */].LEFT, ZOOM: __WEBPACK_IMPORTED_MODULE_0_three__["o" /* MOUSE */].MIDDLE, PAN: __WEBPACK_IMPORTED_MODULE_0_three__["o" /* MOUSE */].RIGHT };
-
-	// for reset
-	this.target0 = this.target.clone();
-	this.position0 = this.object.position.clone();
-	this.zoom0 = this.object.zoom;
-
-	//
-	// public methods
-	//
-
-	this.getPolarAngle = function () {
-
-		return spherical.phi;
-
-	};
-
-	this.getAzimuthalAngle = function () {
-
-		return spherical.theta;
-
-	};
-
-	this.saveState = function () {
-
-		scope.target0.copy( scope.target );
-		scope.position0.copy( scope.object.position );
-		scope.zoom0 = scope.object.zoom;
-
-	};
-
-	this.reset = function () {
-
-		scope.target.copy( scope.target0 );
-		scope.object.position.copy( scope.position0 );
-		scope.object.zoom = scope.zoom0;
-
-		scope.object.updateProjectionMatrix();
-		scope.dispatchEvent( changeEvent );
-
-		scope.update();
-
-		state = STATE.NONE;
-
-	};
-
-	// this method is exposed, but perhaps it would be better if we can make it private...
-	this.update = function () {
-
-		var offset = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		// so camera.up is the orbit axis
-		var quat = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]().setFromUnitVectors( object.up, new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 1, 0 ) );
-		var quatInverse = quat.clone().inverse();
-
-		var lastPosition = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var lastQuaternion = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-
-		return function update() {
-
-			var position = scope.object.position;
-
-			offset.copy( position ).sub( scope.target );
-
-			// rotate offset to "y-axis-is-up" space
-			offset.applyQuaternion( quat );
-
-			// angle from z-axis around y-axis
-			spherical.setFromVector3( offset );
-
-			if ( scope.autoRotate && state === STATE.NONE ) {
-
-				rotateLeft( getAutoRotationAngle() );
-
-			}
-
-			spherical.theta += sphericalDelta.theta;
-			spherical.phi += sphericalDelta.phi;
-
-			// restrict theta to be between desired limits
-			spherical.theta = Math.max( scope.minAzimuthAngle, Math.min( scope.maxAzimuthAngle, spherical.theta ) );
-
-			// restrict phi to be between desired limits
-			spherical.phi = Math.max( scope.minPolarAngle, Math.min( scope.maxPolarAngle, spherical.phi ) );
-
-			spherical.makeSafe();
-
-
-			spherical.radius *= scale;
-
-			// restrict radius to be between desired limits
-			spherical.radius = Math.max( scope.minDistance, Math.min( scope.maxDistance, spherical.radius ) );
-
-			// move target to panned location
-			scope.target.add( panOffset );
-
-			offset.setFromSpherical( spherical );
-
-			// rotate offset back to "camera-up-vector-is-up" space
-			offset.applyQuaternion( quatInverse );
-
-			position.copy( scope.target ).add( offset );
-
-			scope.object.lookAt( scope.target );
-
-			if ( scope.enableDamping === true ) {
-
-				sphericalDelta.theta *= ( 1 - scope.dampingFactor );
-				sphericalDelta.phi *= ( 1 - scope.dampingFactor );
-
-			} else {
-
-				sphericalDelta.set( 0, 0, 0 );
-
-			}
-
-			scale = 1;
-			panOffset.set( 0, 0, 0 );
-
-			// update condition is:
-			// min(camera displacement, camera rotation in radians)^2 > EPS
-			// using small-angle approximation cos(x/2) = 1 - x^2 / 8
-
-			if ( zoomChanged ||
-				lastPosition.distanceToSquared( scope.object.position ) > EPS ||
-				8 * ( 1 - lastQuaternion.dot( scope.object.quaternion ) ) > EPS ) {
-
-				scope.dispatchEvent( changeEvent );
-
-				lastPosition.copy( scope.object.position );
-				lastQuaternion.copy( scope.object.quaternion );
-				zoomChanged = false;
-
-				return true;
-
-			}
-
-			return false;
-
-		};
-
-	}();
-
-	this.dispose = function () {
-
-		scope.domElement.removeEventListener( 'contextmenu', onContextMenu, false );
-		scope.domElement.removeEventListener( 'mousedown', onMouseDown, false );
-		scope.domElement.removeEventListener( 'wheel', onMouseWheel, false );
-
-		scope.domElement.removeEventListener( 'touchstart', onTouchStart, false );
-		scope.domElement.removeEventListener( 'touchend', onTouchEnd, false );
-		scope.domElement.removeEventListener( 'touchmove', onTouchMove, false );
-
-		document.removeEventListener( 'mousemove', onMouseMove, false );
-		document.removeEventListener( 'mouseup', onMouseUp, false );
-
-		window.removeEventListener( 'keydown', onKeyDown, false );
-
-		//scope.dispatchEvent( { type: 'dispose' } ); // should this be added here?
-
-	};
-
-	//
-	// internals
-	//
-
-	var scope = this;
-
-	var changeEvent = { type: 'change' };
-	var startEvent = { type: 'start' };
-	var endEvent = { type: 'end' };
-
-	var STATE = { NONE: - 1, ROTATE: 0, DOLLY: 1, PAN: 2, TOUCH_ROTATE: 3, TOUCH_DOLLY: 4, TOUCH_PAN: 5 };
-
-	var state = STATE.NONE;
-
-	var EPS = 0.000001;
-
-	// current position in spherical coordinates
-	var spherical = new __WEBPACK_IMPORTED_MODULE_0_three__["B" /* Spherical */]();
-	var sphericalDelta = new __WEBPACK_IMPORTED_MODULE_0_three__["B" /* Spherical */]();
-
-	var scale = 1;
-	var panOffset = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-	var zoomChanged = false;
-
-	var rotateStart = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var rotateEnd = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var rotateDelta = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-
-	var panStart = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var panEnd = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var panDelta = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-
-	var dollyStart = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var dollyEnd = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-	var dollyDelta = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-
-	function getAutoRotationAngle() {
-
-		return 2 * Math.PI / 60 / 60 * scope.autoRotateSpeed;
-
-	}
-
-	function getZoomScale() {
-
-		return Math.pow( 0.95, scope.zoomSpeed );
-
-	}
-
-	function rotateLeft( angle ) {
-
-		sphericalDelta.theta -= angle;
-
-	}
-
-	function rotateUp( angle ) {
-
-		sphericalDelta.phi -= angle;
-
-	}
-
-	var panLeft = function () {
-
-		var v = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		return function panLeft( distance, objectMatrix ) {
-
-			v.setFromMatrixColumn( objectMatrix, 0 ); // get X column of objectMatrix
-			v.multiplyScalar( - distance );
-
-			panOffset.add( v );
-
-		};
-
-	}();
-
-	var panUp = function () {
-
-		var v = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		return function panUp( distance, objectMatrix ) {
-
-			v.setFromMatrixColumn( objectMatrix, 1 ); // get Y column of objectMatrix
-			v.multiplyScalar( distance );
-
-			panOffset.add( v );
-
-		};
-
-	}();
-
-	// deltaX and deltaY are in pixels; right and down are positive
-	var pan = function () {
-
-		var offset = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		return function pan( deltaX, deltaY ) {
-
-			var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
-
-			if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["w" /* PerspectiveCamera */] ) {
-
-				// perspective
-				var position = scope.object.position;
-				offset.copy( position ).sub( scope.target );
-				var targetDistance = offset.length();
-
-				// half of the fov is center to top of screen
-				targetDistance *= Math.tan( ( scope.object.fov / 2 ) * Math.PI / 180.0 );
-
-				// we actually don't use screenWidth, since perspective camera is fixed to screen height
-				panLeft( 2 * deltaX * targetDistance / element.clientHeight, scope.object.matrix );
-				panUp( 2 * deltaY * targetDistance / element.clientHeight, scope.object.matrix );
-
-			} else if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["v" /* OrthographicCamera */] ) {
-
-				// orthographic
-				panLeft( deltaX * ( scope.object.right - scope.object.left ) / scope.object.zoom / element.clientWidth, scope.object.matrix );
-				panUp( deltaY * ( scope.object.top - scope.object.bottom ) / scope.object.zoom / element.clientHeight, scope.object.matrix );
-
-			} else {
-
-				// camera neither orthographic nor perspective
-				console.warn( 'WARNING: OrbitControls.js encountered an unknown camera type - pan disabled.' );
-				scope.enablePan = false;
-
-			}
-
-		};
-
-	}();
-
-	function dollyIn( dollyScale ) {
-
-		if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["w" /* PerspectiveCamera */] ) {
-
-			scale /= dollyScale;
-
-		} else if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["v" /* OrthographicCamera */] ) {
-
-			scope.object.zoom = Math.max( scope.minZoom, Math.min( scope.maxZoom, scope.object.zoom * dollyScale ) );
-			scope.object.updateProjectionMatrix();
-			zoomChanged = true;
-
-		} else {
-
-			console.warn( 'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.' );
-			scope.enableZoom = false;
-
-		}
-
-	}
-
-	function dollyOut( dollyScale ) {
-
-		if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["w" /* PerspectiveCamera */] ) {
-
-			scale *= dollyScale;
-
-		} else if ( scope.object instanceof __WEBPACK_IMPORTED_MODULE_0_three__["v" /* OrthographicCamera */] ) {
-
-			scope.object.zoom = Math.max( scope.minZoom, Math.min( scope.maxZoom, scope.object.zoom / dollyScale ) );
-			scope.object.updateProjectionMatrix();
-			zoomChanged = true;
-
-		} else {
-
-			console.warn( 'WARNING: OrbitControls.js encountered an unknown camera type - dolly/zoom disabled.' );
-			scope.enableZoom = false;
-
-		}
-
-	}
-
-	//
-	// event callbacks - update the object state
-	//
-
-	function handleMouseDownRotate( event ) {
-
-		//console.log( 'handleMouseDownRotate' );
-
-		rotateStart.set( event.clientX, event.clientY );
-
-	}
-
-	function handleMouseDownDolly( event ) {
-
-		//console.log( 'handleMouseDownDolly' );
-
-		dollyStart.set( event.clientX, event.clientY );
-
-	}
-
-	function handleMouseDownPan( event ) {
-
-		//console.log( 'handleMouseDownPan' );
-
-		panStart.set( event.clientX, event.clientY );
-
-	}
-
-	function handleMouseMoveRotate( event ) {
-
-		//console.log( 'handleMouseMoveRotate' );
-
-		rotateEnd.set( event.clientX, event.clientY );
-		rotateDelta.subVectors( rotateEnd, rotateStart );
-
-		var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
-
-		// rotating across whole screen goes 360 degrees around
-		rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-
-		// rotating up and down along whole screen attempts to go 360, but limited to 180
-		rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-
-		rotateStart.copy( rotateEnd );
-
-		scope.update();
-
-	}
-
-	function handleMouseMoveDolly( event ) {
-
-		//console.log( 'handleMouseMoveDolly' );
-
-		dollyEnd.set( event.clientX, event.clientY );
-
-		dollyDelta.subVectors( dollyEnd, dollyStart );
-
-		if ( dollyDelta.y > 0 ) {
-
-			dollyIn( getZoomScale() );
-
-		} else if ( dollyDelta.y < 0 ) {
-
-			dollyOut( getZoomScale() );
-
-		}
-
-		dollyStart.copy( dollyEnd );
-
-		scope.update();
-
-	}
-
-	function handleMouseMovePan( event ) {
-
-		//console.log( 'handleMouseMovePan' );
-
-		panEnd.set( event.clientX, event.clientY );
-
-		panDelta.subVectors( panEnd, panStart );
-
-		pan( panDelta.x, panDelta.y );
-
-		panStart.copy( panEnd );
-
-		scope.update();
-
-	}
-
-	function handleMouseUp( event ) {
-
-		// console.log( 'handleMouseUp' );
-
-	}
-
-	function handleMouseWheel( event ) {
-
-		// console.log( 'handleMouseWheel' );
-
-		if ( event.deltaY < 0 ) {
-
-			dollyOut( getZoomScale() );
-
-		} else if ( event.deltaY > 0 ) {
-
-			dollyIn( getZoomScale() );
-
-		}
-
-		scope.update();
-
-	}
-
-	function handleKeyDown( event ) {
-
-		//console.log( 'handleKeyDown' );
-
-		switch ( event.keyCode ) {
-
-			case scope.keys.UP:
-				pan( 0, scope.keyPanSpeed );
-				scope.update();
-				break;
-
-			case scope.keys.BOTTOM:
-				pan( 0, - scope.keyPanSpeed );
-				scope.update();
-				break;
-
-			case scope.keys.LEFT:
-				pan( scope.keyPanSpeed, 0 );
-				scope.update();
-				break;
-
-			case scope.keys.RIGHT:
-				pan( - scope.keyPanSpeed, 0 );
-				scope.update();
-				break;
-
-		}
-
-	}
-
-	function handleTouchStartRotate( event ) {
-
-		//console.log( 'handleTouchStartRotate' );
-
-		rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-
-	}
-
-	function handleTouchStartDolly( event ) {
-
-		//console.log( 'handleTouchStartDolly' );
-
-		var dx = event.touches[ 0 ].pageX - event.touches[ 1 ].pageX;
-		var dy = event.touches[ 0 ].pageY - event.touches[ 1 ].pageY;
-
-		var distance = Math.sqrt( dx * dx + dy * dy );
-
-		dollyStart.set( 0, distance );
-
-	}
-
-	function handleTouchStartPan( event ) {
-
-		//console.log( 'handleTouchStartPan' );
-
-		panStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-
-	}
-
-	function handleTouchMoveRotate( event ) {
-
-		//console.log( 'handleTouchMoveRotate' );
-
-		rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-		rotateDelta.subVectors( rotateEnd, rotateStart );
-
-		var element = scope.domElement === document ? scope.domElement.body : scope.domElement;
-
-		// rotating across whole screen goes 360 degrees around
-		rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-
-		// rotating up and down along whole screen attempts to go 360, but limited to 180
-		rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-
-		rotateStart.copy( rotateEnd );
-
-		scope.update();
-
-	}
-
-	function handleTouchMoveDolly( event ) {
-
-		//console.log( 'handleTouchMoveDolly' );
-
-		var dx = event.touches[ 0 ].pageX - event.touches[ 1 ].pageX;
-		var dy = event.touches[ 0 ].pageY - event.touches[ 1 ].pageY;
-
-		var distance = Math.sqrt( dx * dx + dy * dy );
-
-		dollyEnd.set( 0, distance );
-
-		dollyDelta.subVectors( dollyEnd, dollyStart );
-
-		if ( dollyDelta.y > 0 ) {
-
-			dollyOut( getZoomScale() );
-
-		} else if ( dollyDelta.y < 0 ) {
-
-			dollyIn( getZoomScale() );
-
-		}
-
-		dollyStart.copy( dollyEnd );
-
-		scope.update();
-
-	}
-
-	function handleTouchMovePan( event ) {
-
-		//console.log( 'handleTouchMovePan' );
-
-		panEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-
-		panDelta.subVectors( panEnd, panStart );
-
-		pan( panDelta.x, panDelta.y );
-
-		panStart.copy( panEnd );
-
-		scope.update();
-
-	}
-
-	function handleTouchEnd( event ) {
-
-		//console.log( 'handleTouchEnd' );
-
-	}
-
-	//
-	// event handlers - FSM: listen for events and reset state
-	//
-
-	function onMouseDown( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		event.preventDefault();
-
-		switch ( event.button ) {
-
-			case scope.mouseButtons.ORBIT:
-
-				if ( scope.enableRotate === false ) return;
-
-				handleMouseDownRotate( event );
-
-				state = STATE.ROTATE;
-
-				break;
-
-			case scope.mouseButtons.ZOOM:
-
-				if ( scope.enableZoom === false ) return;
-
-				handleMouseDownDolly( event );
-
-				state = STATE.DOLLY;
-
-				break;
-
-			case scope.mouseButtons.PAN:
-
-				if ( scope.enablePan === false ) return;
-
-				handleMouseDownPan( event );
-
-				state = STATE.PAN;
-
-				break;
-
-		}
-
-		if ( state !== STATE.NONE ) {
-
-			document.addEventListener( 'mousemove', onMouseMove, false );
-			document.addEventListener( 'mouseup', onMouseUp, false );
-
-			scope.dispatchEvent( startEvent );
-
-		}
-
-	}
-
-	function onMouseMove( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		event.preventDefault();
-
-		switch ( state ) {
-
-			case STATE.ROTATE:
-
-				if ( scope.enableRotate === false ) return;
-
-				handleMouseMoveRotate( event );
-
-				break;
-
-			case STATE.DOLLY:
-
-				if ( scope.enableZoom === false ) return;
-
-				handleMouseMoveDolly( event );
-
-				break;
-
-			case STATE.PAN:
-
-				if ( scope.enablePan === false ) return;
-
-				handleMouseMovePan( event );
-
-				break;
-
-		}
-
-	}
-
-	function onMouseUp( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		handleMouseUp( event );
-
-		document.removeEventListener( 'mousemove', onMouseMove, false );
-		document.removeEventListener( 'mouseup', onMouseUp, false );
-
-		scope.dispatchEvent( endEvent );
-
-		state = STATE.NONE;
-
-	}
-
-	function onMouseWheel( event ) {
-
-		if ( scope.enabled === false || scope.enableZoom === false || ( state !== STATE.NONE && state !== STATE.ROTATE ) ) return;
-
-		event.preventDefault();
-		event.stopPropagation();
-
-		handleMouseWheel( event );
-
-		scope.dispatchEvent( startEvent ); // not sure why these are here...
-		scope.dispatchEvent( endEvent );
-
-	}
-
-	function onKeyDown( event ) {
-
-		if ( scope.enabled === false || scope.enableKeys === false || scope.enablePan === false ) return;
-
-		handleKeyDown( event );
-
-	}
-
-	function onTouchStart( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		switch ( event.touches.length ) {
-
-			case 1:	// one-fingered touch: rotate
-
-				if ( scope.enableRotate === false ) return;
-
-				handleTouchStartRotate( event );
-
-				state = STATE.TOUCH_ROTATE;
-
-				break;
-
-			case 2:	// two-fingered touch: dolly
-
-				if ( scope.enableZoom === false ) return;
-
-				handleTouchStartDolly( event );
-
-				state = STATE.TOUCH_DOLLY;
-
-				break;
-
-			case 3: // three-fingered touch: pan
-
-				if ( scope.enablePan === false ) return;
-
-				handleTouchStartPan( event );
-
-				state = STATE.TOUCH_PAN;
-
-				break;
-
-			default:
-
-				state = STATE.NONE;
-
-		}
-
-		if ( state !== STATE.NONE ) {
-
-			scope.dispatchEvent( startEvent );
-
-		}
-
-	}
-
-	function onTouchMove( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		event.preventDefault();
-		event.stopPropagation();
-
-		switch ( event.touches.length ) {
-
-			case 1: // one-fingered touch: rotate
-
-				if ( scope.enableRotate === false ) return;
-				if ( state !== STATE.TOUCH_ROTATE ) return; // is this needed?...
-
-				handleTouchMoveRotate( event );
-
-				break;
-
-			case 2: // two-fingered touch: dolly
-
-				if ( scope.enableZoom === false ) return;
-				if ( state !== STATE.TOUCH_DOLLY ) return; // is this needed?...
-
-				handleTouchMoveDolly( event );
-
-				break;
-
-			case 3: // three-fingered touch: pan
-
-				if ( scope.enablePan === false ) return;
-				if ( state !== STATE.TOUCH_PAN ) return; // is this needed?...
-
-				handleTouchMovePan( event );
-
-				break;
-
-			default:
-
-				state = STATE.NONE;
-
-		}
-
-	}
-
-	function onTouchEnd( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		handleTouchEnd( event );
-
-		scope.dispatchEvent( endEvent );
-
-		state = STATE.NONE;
-
-	}
-
-	function onContextMenu( event ) {
-
-		if ( scope.enabled === false ) return;
-
-		event.preventDefault();
-
-	}
-
-	//
-
-	scope.domElement.addEventListener( 'contextmenu', onContextMenu, false );
-
-	scope.domElement.addEventListener( 'mousedown', onMouseDown, false );
-	scope.domElement.addEventListener( 'wheel', onMouseWheel, false );
-
-	scope.domElement.addEventListener( 'touchstart', onTouchStart, false );
-	scope.domElement.addEventListener( 'touchend', onTouchEnd, false );
-	scope.domElement.addEventListener( 'touchmove', onTouchMove, false );
-
-	window.addEventListener( 'keydown', onKeyDown, false );
-
-	// force an update at start
-
-	this.update();
-
-};
-
-__WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["i" /* EventDispatcher */].prototype );
-__WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"];
-
-Object.defineProperties( __WEBPACK_IMPORTED_MODULE_0_three__["OrbitControls"].prototype, {
-
-	center: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .center has been renamed to .target' );
-			return this.target;
-
-		}
-
-	},
-
-	// backward compatibility
-
-	noZoom: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .noZoom has been deprecated. Use .enableZoom instead.' );
-			return ! this.enableZoom;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .noZoom has been deprecated. Use .enableZoom instead.' );
-			this.enableZoom = ! value;
-
-		}
-
-	},
-
-	noRotate: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .noRotate has been deprecated. Use .enableRotate instead.' );
-			return ! this.enableRotate;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .noRotate has been deprecated. Use .enableRotate instead.' );
-			this.enableRotate = ! value;
-
-		}
-
-	},
-
-	noPan: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .noPan has been deprecated. Use .enablePan instead.' );
-			return ! this.enablePan;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .noPan has been deprecated. Use .enablePan instead.' );
-			this.enablePan = ! value;
-
-		}
-
-	},
-
-	noKeys: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .noKeys has been deprecated. Use .enableKeys instead.' );
-			return ! this.enableKeys;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .noKeys has been deprecated. Use .enableKeys instead.' );
-			this.enableKeys = ! value;
-
-		}
-
-	},
-
-	staticMoving: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .staticMoving has been deprecated. Use .enableDamping instead.' );
-			return ! this.enableDamping;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .staticMoving has been deprecated. Use .enableDamping instead.' );
-			this.enableDamping = ! value;
-
-		}
-
-	},
-
-	dynamicDampingFactor: {
-
-		get: function () {
-
-			console.warn( 'THREE.OrbitControls: .dynamicDampingFactor has been renamed. Use .dampingFactor instead.' );
-			return this.dampingFactor;
-
-		},
-
-		set: function ( value ) {
-
-			console.warn( 'THREE.OrbitControls: .dynamicDampingFactor has been renamed. Use .dampingFactor instead.' );
-			this.dampingFactor = value;
-
-		}
-
-	}
-
-} );
-
-
-/***/ }),
-
-/***/ 394:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(106);
-/**
- * @author arodic / https://github.com/arodic
- */
-
-
-( function () {
-
-	'use strict';
-	var GizmoMaterial = function ( parameters ) {
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["r" /* MeshBasicMaterial */].call( this );
-
-		this.depthTest = false;
-		this.depthWrite = false;
-		this.side = __WEBPACK_IMPORTED_MODULE_0_three__["k" /* FrontSide */];
-		this.transparent = true;
-
-		this.setValues( parameters );
-
-		this.oldColor = this.color.clone();
-		this.oldOpacity = this.opacity;
-
-		this.highlight = function( highlighted ) {
-
-			if ( highlighted ) {
-
-				this.color.setRGB( 1, 1, 0 );
-				this.opacity = 1;
-
-			} else {
-
-				this.color.copy( this.oldColor );
-				this.opacity = this.oldOpacity;
-
-			}
-
-		};
-
-	};
-
-	GizmoMaterial.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["r" /* MeshBasicMaterial */].prototype );
-	GizmoMaterial.prototype.constructor = GizmoMaterial;
-
-
-	var GizmoLineMaterial = function ( parameters ) {
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["n" /* LineBasicMaterial */].call( this );
-
-		this.depthTest = false;
-		this.depthWrite = false;
-		this.transparent = true;
-		this.linewidth = 1;
-
-		this.setValues( parameters );
-
-		this.oldColor = this.color.clone();
-		this.oldOpacity = this.opacity;
-
-		this.highlight = function( highlighted ) {
-
-			if ( highlighted ) {
-
-				this.color.setRGB( 1, 1, 0 );
-				this.opacity = 1;
-
-			} else {
-
-				this.color.copy( this.oldColor );
-				this.opacity = this.oldOpacity;
-
-			}
-
-		};
-
-	};
-
-	GizmoLineMaterial.prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["n" /* LineBasicMaterial */].prototype );
-	GizmoLineMaterial.prototype.constructor = GizmoLineMaterial;
-
-
-	var pickerMaterial = new GizmoMaterial( { visible: false, transparent: false } );
-
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"] = function () {
-
-		this.init = function () {
-
-			__WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */].call( this );
-
-			this.handles = new __WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */]();
-			this.pickers = new __WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */]();
-			this.planes = new __WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */]();
-
-			this.add( this.handles );
-			this.add( this.pickers );
-			this.add( this.planes );
-
-			//// PLANES
-
-			var planeGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 50, 50, 2, 2 );
-			var planeMaterial = new __WEBPACK_IMPORTED_MODULE_0_three__["r" /* MeshBasicMaterial */]( { visible: false, side: __WEBPACK_IMPORTED_MODULE_0_three__["g" /* DoubleSide */] } );
-
-			var planes = {
-				"XY":   new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( planeGeometry, planeMaterial ),
-				"YZ":   new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( planeGeometry, planeMaterial ),
-				"XZ":   new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( planeGeometry, planeMaterial ),
-				"XYZE": new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( planeGeometry, planeMaterial )
-			};
-
-			this.activePlane = planes[ "XYZE" ];
-
-			planes[ "YZ" ].rotation.set( 0, Math.PI / 2, 0 );
-			planes[ "XZ" ].rotation.set( - Math.PI / 2, 0, 0 );
-
-			for ( var i in planes ) {
-
-				planes[ i ].name = i;
-				this.planes.add( planes[ i ] );
-				this.planes[ i ] = planes[ i ];
-
-			}
-
-			//// HANDLES AND PICKERS
-
-			var setupGizmos = function( gizmoMap, parent ) {
-
-				for ( var name in gizmoMap ) {
-
-					for ( i = gizmoMap[ name ].length; i --; ) {
-
-						var object = gizmoMap[ name ][ i ][ 0 ];
-						var position = gizmoMap[ name ][ i ][ 1 ];
-						var rotation = gizmoMap[ name ][ i ][ 2 ];
-
-						object.name = name;
-
-						if ( position ) object.position.set( position[ 0 ], position[ 1 ], position[ 2 ] );
-						if ( rotation ) object.rotation.set( rotation[ 0 ], rotation[ 1 ], rotation[ 2 ] );
-
-						parent.add( object );
-
-					}
-
-				}
-
-			};
-
-			setupGizmos( this.handleGizmos, this.handles );
-			setupGizmos( this.pickerGizmos, this.pickers );
-
-			// reset Transformations
-
-			this.traverse( function ( child ) {
-
-				if ( child instanceof __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */] ) {
-
-					child.updateMatrix();
-
-					var tempGeometry = child.geometry.clone();
-					tempGeometry.applyMatrix( child.matrix );
-					child.geometry = tempGeometry;
-
-					child.position.set( 0, 0, 0 );
-					child.rotation.set( 0, 0, 0 );
-					child.scale.set( 1, 1, 1 );
-
-				}
-
-			} );
-
-		};
-
-		this.highlight = function ( axis ) {
-
-			this.traverse( function( child ) {
-
-				if ( child.material && child.material.highlight ) {
-
-					if ( child.name === axis ) {
-
-						child.material.highlight( true );
-
-					} else {
-
-						child.material.highlight( false );
-
-					}
-
-				}
-
-			} );
-
-		};
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */].prototype );
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"];
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype.update = function ( rotation, eye ) {
-
-		var vec1 = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 0, 0 );
-		var vec2 = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 1, 0 );
-		var lookAtMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-
-		this.traverse( function( child ) {
-
-			if ( child.name.search( "E" ) !== - 1 ) {
-
-				child.quaternion.setFromRotationMatrix( lookAtMatrix.lookAt( eye, vec1, vec2 ) );
-
-			} else if ( child.name.search( "X" ) !== - 1 || child.name.search( "Y" ) !== - 1 || child.name.search( "Z" ) !== - 1 ) {
-
-				child.quaternion.setFromEuler( rotation );
-
-			}
-
-		} );
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoTranslate"] = function () {
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].call( this );
-
-		var arrowGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* Geometry */]();
-		var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["f" /* CylinderGeometry */]( 0, 0.05, 0.2, 12, 1, false ) );
-		mesh.position.y = 0.5;
-		mesh.updateMatrix();
-
-		arrowGeometry.merge( mesh.geometry, mesh.matrix );
-
-		var lineXGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineXGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  1, 0, 0 ], 3 ) );
-
-		var lineYGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineYGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  0, 1, 0 ], 3 ) );
-
-		var lineZGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineZGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  0, 0, 1 ], 3 ) );
-
-		this.handleGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0xff0000 } ) ), [ 0.5, 0, 0 ], [ 0, 0, - Math.PI / 2 ] ],
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineXGeometry, new GizmoLineMaterial( { color: 0xff0000 } ) ) ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0x00ff00 } ) ), [ 0, 0.5, 0 ] ],
-				[	new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineYGeometry, new GizmoLineMaterial( { color: 0x00ff00 } ) ) ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0x0000ff } ) ), [ 0, 0, 0.5 ], [ Math.PI / 2, 0, 0 ] ],
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineZGeometry, new GizmoLineMaterial( { color: 0x0000ff } ) ) ]
-			],
-
-			XYZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["t" /* OctahedronGeometry */]( 0.1, 0 ), new GizmoMaterial( { color: 0xffffff, opacity: 0.25 } ) ), [ 0, 0, 0 ], [ 0, 0, 0 ] ]
-			],
-
-			XY: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.29, 0.29 ), new GizmoMaterial( { color: 0xffff00, opacity: 0.25 } ) ), [ 0.15, 0.15, 0 ] ]
-			],
-
-			YZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.29, 0.29 ), new GizmoMaterial( { color: 0x00ffff, opacity: 0.25 } ) ), [ 0, 0.15, 0.15 ], [ 0, Math.PI / 2, 0 ] ]
-			],
-
-			XZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.29, 0.29 ), new GizmoMaterial( { color: 0xff00ff, opacity: 0.25 } ) ), [ 0.15, 0, 0.15 ], [ - Math.PI / 2, 0, 0 ] ]
-			]
-
-		};
-
-		this.pickerGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0.6, 0, 0 ], [ 0, 0, - Math.PI / 2 ] ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0, 0.6, 0 ] ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0, 0, 0.6 ], [ Math.PI / 2, 0, 0 ] ]
-			],
-
-			XYZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["t" /* OctahedronGeometry */]( 0.2, 0 ), pickerMaterial ) ]
-			],
-
-			XY: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.4, 0.4 ), pickerMaterial ), [ 0.2, 0.2, 0 ] ]
-			],
-
-			YZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.4, 0.4 ), pickerMaterial ), [ 0, 0.2, 0.2 ], [ 0, Math.PI / 2, 0 ] ]
-			],
-
-			XZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["x" /* PlaneBufferGeometry */]( 0.4, 0.4 ), pickerMaterial ), [ 0.2, 0, 0.2 ], [ - Math.PI / 2, 0, 0 ] ]
-			]
-
-		};
-
-		this.setActivePlane = function ( axis, eye ) {
-
-			var tempMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-			eye.applyMatrix4( tempMatrix.getInverse( tempMatrix.extractRotation( this.planes[ "XY" ].matrixWorld ) ) );
-
-			if ( axis === "X" ) {
-
-				this.activePlane = this.planes[ "XY" ];
-
-				if ( Math.abs( eye.y ) > Math.abs( eye.z ) ) this.activePlane = this.planes[ "XZ" ];
-
-			}
-
-			if ( axis === "Y" ) {
-
-				this.activePlane = this.planes[ "XY" ];
-
-				if ( Math.abs( eye.x ) > Math.abs( eye.z ) ) this.activePlane = this.planes[ "YZ" ];
-
-			}
-
-			if ( axis === "Z" ) {
-
-				this.activePlane = this.planes[ "XZ" ];
-
-				if ( Math.abs( eye.x ) > Math.abs( eye.y ) ) this.activePlane = this.planes[ "YZ" ];
-
-			}
-
-			if ( axis === "XYZ" ) this.activePlane = this.planes[ "XYZE" ];
-
-			if ( axis === "XY" ) this.activePlane = this.planes[ "XY" ];
-
-			if ( axis === "YZ" ) this.activePlane = this.planes[ "YZ" ];
-
-			if ( axis === "XZ" ) this.activePlane = this.planes[ "XZ" ];
-
-		};
-
-		this.init();
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoTranslate"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype );
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoTranslate"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoTranslate"];
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoRotate"] = function () {
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].call( this );
-
-		var CircleGeometry = function ( radius, facing, arc ) {
-
-			var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-			var vertices = [];
-			arc = arc ? arc : 1;
-
-			for ( var i = 0; i <= 64 * arc; ++ i ) {
-
-				if ( facing === 'x' ) vertices.push( 0, Math.cos( i / 32 * Math.PI ) * radius, Math.sin( i / 32 * Math.PI ) * radius );
-				if ( facing === 'y' ) vertices.push( Math.cos( i / 32 * Math.PI ) * radius, 0, Math.sin( i / 32 * Math.PI ) * radius );
-				if ( facing === 'z' ) vertices.push( Math.sin( i / 32 * Math.PI ) * radius, Math.cos( i / 32 * Math.PI ) * radius, 0 );
-
-			}
-
-			geometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( vertices, 3 ) );
-			return geometry;
-
-		};
-
-		this.handleGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( new CircleGeometry( 1, 'x', 0.5 ), new GizmoLineMaterial( { color: 0xff0000 } ) ) ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( new CircleGeometry( 1, 'y', 0.5 ), new GizmoLineMaterial( { color: 0x00ff00 } ) ) ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( new CircleGeometry( 1, 'z', 0.5 ), new GizmoLineMaterial( { color: 0x0000ff } ) ) ]
-			],
-
-			E: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( new CircleGeometry( 1.25, 'z', 1 ), new GizmoLineMaterial( { color: 0xcccc00 } ) ) ]
-			],
-
-			XYZE: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( new CircleGeometry( 1, 'z', 1 ), new GizmoLineMaterial( { color: 0x787878 } ) ) ]
-			]
-
-		};
-
-		this.pickerGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["C" /* TorusBufferGeometry */]( 1, 0.12, 4, 12, Math.PI ), pickerMaterial ), [ 0, 0, 0 ], [ 0, - Math.PI / 2, - Math.PI / 2 ] ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["C" /* TorusBufferGeometry */]( 1, 0.12, 4, 12, Math.PI ), pickerMaterial ), [ 0, 0, 0 ], [ Math.PI / 2, 0, 0 ] ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["C" /* TorusBufferGeometry */]( 1, 0.12, 4, 12, Math.PI ), pickerMaterial ), [ 0, 0, 0 ], [ 0, 0, - Math.PI / 2 ] ]
-			],
-
-			E: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["C" /* TorusBufferGeometry */]( 1.25, 0.12, 2, 24 ), pickerMaterial ) ]
-			],
-
-			XYZE: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]() ]// TODO
-			]
-
-		};
-
-		this.setActivePlane = function ( axis ) {
-
-			if ( axis === "E" ) this.activePlane = this.planes[ "XYZE" ];
-
-			if ( axis === "X" ) this.activePlane = this.planes[ "YZ" ];
-
-			if ( axis === "Y" ) this.activePlane = this.planes[ "XZ" ];
-
-			if ( axis === "Z" ) this.activePlane = this.planes[ "XY" ];
-
-		};
-
-		this.update = function ( rotation, eye2 ) {
-
-			__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype.update.apply( this, arguments );
-
-			var tempMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-			var worldRotation = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Euler */]( 0, 0, 1 );
-			var tempQuaternion = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-			var unitX = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 1, 0, 0 );
-			var unitY = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 1, 0 );
-			var unitZ = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 0, 1 );
-			var quaternionX = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-			var quaternionY = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-			var quaternionZ = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-			var eye = eye2.clone();
-
-			worldRotation.copy( this.planes[ "XY" ].rotation );
-			tempQuaternion.setFromEuler( worldRotation );
-
-			tempMatrix.makeRotationFromQuaternion( tempQuaternion ).getInverse( tempMatrix );
-			eye.applyMatrix4( tempMatrix );
-
-			this.traverse( function( child ) {
-
-				tempQuaternion.setFromEuler( worldRotation );
-
-				if ( child.name === "X" ) {
-
-					quaternionX.setFromAxisAngle( unitX, Math.atan2( - eye.y, eye.z ) );
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionX );
-					child.quaternion.copy( tempQuaternion );
-
-				}
-
-				if ( child.name === "Y" ) {
-
-					quaternionY.setFromAxisAngle( unitY, Math.atan2( eye.x, eye.z ) );
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionY );
-					child.quaternion.copy( tempQuaternion );
-
-				}
-
-				if ( child.name === "Z" ) {
-
-					quaternionZ.setFromAxisAngle( unitZ, Math.atan2( eye.y, eye.x ) );
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionZ );
-					child.quaternion.copy( tempQuaternion );
-
-				}
-
-			} );
-
-		};
-
-		this.init();
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoRotate"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype );
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoRotate"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoRotate"];
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoScale"] = function () {
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].call( this );
-
-		var arrowGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["l" /* Geometry */]();
-		var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["c" /* BoxGeometry */]( 0.125, 0.125, 0.125 ) );
-		mesh.position.y = 0.5;
-		mesh.updateMatrix();
-
-		arrowGeometry.merge( mesh.geometry, mesh.matrix );
-
-		var lineXGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineXGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  1, 0, 0 ], 3 ) );
-
-		var lineYGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineYGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  0, 1, 0 ], 3 ) );
-
-		var lineZGeometry = new __WEBPACK_IMPORTED_MODULE_0_three__["d" /* BufferGeometry */]();
-		lineZGeometry.addAttribute( 'position', new __WEBPACK_IMPORTED_MODULE_0_three__["j" /* Float32BufferAttribute */]( [ 0, 0, 0,  0, 0, 1 ], 3 ) );
-
-		this.handleGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0xff0000 } ) ), [ 0.5, 0, 0 ], [ 0, 0, - Math.PI / 2 ] ],
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineXGeometry, new GizmoLineMaterial( { color: 0xff0000 } ) ) ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0x00ff00 } ) ), [ 0, 0.5, 0 ] ],
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineYGeometry, new GizmoLineMaterial( { color: 0x00ff00 } ) ) ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( arrowGeometry, new GizmoMaterial( { color: 0x0000ff } ) ), [ 0, 0, 0.5 ], [ Math.PI / 2, 0, 0 ] ],
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["m" /* Line */]( lineZGeometry, new GizmoLineMaterial( { color: 0x0000ff } ) ) ]
-			],
-
-			XYZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["b" /* BoxBufferGeometry */]( 0.125, 0.125, 0.125 ), new GizmoMaterial( { color: 0xffffff, opacity: 0.25 } ) ) ]
-			]
-
-		};
-
-		this.pickerGizmos = {
-
-			X: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0.6, 0, 0 ], [ 0, 0, - Math.PI / 2 ] ]
-			],
-
-			Y: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0, 0.6, 0 ] ]
-			],
-
-			Z: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["e" /* CylinderBufferGeometry */]( 0.2, 0, 1, 4, 1, false ), pickerMaterial ), [ 0, 0, 0.6 ], [ Math.PI / 2, 0, 0 ] ]
-			],
-
-			XYZ: [
-				[ new __WEBPACK_IMPORTED_MODULE_0_three__["q" /* Mesh */]( new __WEBPACK_IMPORTED_MODULE_0_three__["b" /* BoxBufferGeometry */]( 0.4, 0.4, 0.4 ), pickerMaterial ) ]
-			]
-
-		};
-
-		this.setActivePlane = function ( axis, eye ) {
-
-			var tempMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-			eye.applyMatrix4( tempMatrix.getInverse( tempMatrix.extractRotation( this.planes[ "XY" ].matrixWorld ) ) );
-
-			if ( axis === "X" ) {
-
-				this.activePlane = this.planes[ "XY" ];
-				if ( Math.abs( eye.y ) > Math.abs( eye.z ) ) this.activePlane = this.planes[ "XZ" ];
-
-			}
-
-			if ( axis === "Y" ) {
-
-				this.activePlane = this.planes[ "XY" ];
-				if ( Math.abs( eye.x ) > Math.abs( eye.z ) ) this.activePlane = this.planes[ "YZ" ];
-
-			}
-
-			if ( axis === "Z" ) {
-
-				this.activePlane = this.planes[ "XZ" ];
-				if ( Math.abs( eye.x ) > Math.abs( eye.y ) ) this.activePlane = this.planes[ "YZ" ];
-
-			}
-
-			if ( axis === "XYZ" ) this.activePlane = this.planes[ "XYZE" ];
-
-		};
-
-		this.init();
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoScale"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmo"].prototype );
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoScale"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoScale"];
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformControls"] = function ( camera, domElement ) {
-
-		// TODO: Make non-uniform scale and rotate play nice in hierarchies
-		// TODO: ADD RXYZ contol
-
-		__WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */].call( this );
-
-		domElement = ( domElement !== undefined ) ? domElement : document;
-
-		this.object = undefined;
-		this.visible = false;
-		this.translationSnap = null;
-		this.rotationSnap = null;
-		this.space = "world";
-		this.size = 1;
-		this.axis = null;
-
-		var scope = this;
-
-		var _mode = "translate";
-		var _dragging = false;
-		var _gizmo = {
-
-			"translate": new __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoTranslate"](),
-			"rotate": new __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoRotate"](),
-			"scale": new __WEBPACK_IMPORTED_MODULE_0_three__["TransformGizmoScale"]()
-		};
-
-		for ( var type in _gizmo ) {
-
-			var gizmoObj = _gizmo[ type ];
-
-			gizmoObj.visible = ( type === _mode );
-			this.add( gizmoObj );
-
-		}
-
-		var changeEvent = { type: "change" };
-		var mouseDownEvent = { type: "mouseDown" };
-		var mouseUpEvent = { type: "mouseUp", mode: _mode };
-		var objectChangeEvent = { type: "objectChange" };
-
-		var ray = new __WEBPACK_IMPORTED_MODULE_0_three__["z" /* Raycaster */]();
-		var pointerVector = new __WEBPACK_IMPORTED_MODULE_0_three__["I" /* Vector2 */]();
-
-		var point = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var offset = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		var rotation = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var offsetRotation = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var scale = 1;
-
-		var lookAtMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-		var eye = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		var tempMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-		var tempVector = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var tempQuaternion = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-		var unitX = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 1, 0, 0 );
-		var unitY = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 1, 0 );
-		var unitZ = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]( 0, 0, 1 );
-
-		var quaternionXYZ = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-		var quaternionX = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-		var quaternionY = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-		var quaternionZ = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-		var quaternionE = new __WEBPACK_IMPORTED_MODULE_0_three__["y" /* Quaternion */]();
-
-		var oldPosition = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var oldScale = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var oldRotationMatrix = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-
-		var parentRotationMatrix  = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-		var parentScale = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-
-		var worldPosition = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var worldRotation = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Euler */]();
-		var worldRotationMatrix  = new __WEBPACK_IMPORTED_MODULE_0_three__["p" /* Matrix4 */]();
-		var camPosition = new __WEBPACK_IMPORTED_MODULE_0_three__["J" /* Vector3 */]();
-		var camRotation = new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Euler */]();
-
-		domElement.addEventListener( "mousedown", onPointerDown, false );
-		domElement.addEventListener( "touchstart", onPointerDown, false );
-
-		domElement.addEventListener( "mousemove", onPointerHover, false );
-		domElement.addEventListener( "touchmove", onPointerHover, false );
-
-		domElement.addEventListener( "mousemove", onPointerMove, false );
-		domElement.addEventListener( "touchmove", onPointerMove, false );
-
-		domElement.addEventListener( "mouseup", onPointerUp, false );
-		domElement.addEventListener( "mouseout", onPointerUp, false );
-		domElement.addEventListener( "touchend", onPointerUp, false );
-		domElement.addEventListener( "touchcancel", onPointerUp, false );
-		domElement.addEventListener( "touchleave", onPointerUp, false );
-
-		this.dispose = function () {
-
-			domElement.removeEventListener( "mousedown", onPointerDown );
-			domElement.removeEventListener( "touchstart", onPointerDown );
-
-			domElement.removeEventListener( "mousemove", onPointerHover );
-			domElement.removeEventListener( "touchmove", onPointerHover );
-
-			domElement.removeEventListener( "mousemove", onPointerMove );
-			domElement.removeEventListener( "touchmove", onPointerMove );
-
-			domElement.removeEventListener( "mouseup", onPointerUp );
-			domElement.removeEventListener( "mouseout", onPointerUp );
-			domElement.removeEventListener( "touchend", onPointerUp );
-			domElement.removeEventListener( "touchcancel", onPointerUp );
-			domElement.removeEventListener( "touchleave", onPointerUp );
-
-		};
-
-		this.attach = function ( object ) {
-
-			this.object = object;
-			this.visible = true;
-			this.update();
-
-		};
-
-		this.detach = function () {
-
-			this.object = undefined;
-			this.visible = false;
-			this.axis = null;
-
-		};
-
-		this.getMode = function () {
-
-			return _mode;
-
-		};
-
-		this.setMode = function ( mode ) {
-
-			_mode = mode ? mode : _mode;
-
-			if ( _mode === "scale" ) scope.space = "local";
-
-			for ( var type in _gizmo ) _gizmo[ type ].visible = ( type === _mode );
-
-			this.update();
-			scope.dispatchEvent( changeEvent );
-
-		};
-
-		this.setTranslationSnap = function ( translationSnap ) {
-
-			scope.translationSnap = translationSnap;
-
-		};
-
-		this.setRotationSnap = function ( rotationSnap ) {
-
-			scope.rotationSnap = rotationSnap;
-
-		};
-
-		this.setSize = function ( size ) {
-
-			scope.size = size;
-			this.update();
-			scope.dispatchEvent( changeEvent );
-
-		};
-
-		this.setSpace = function ( space ) {
-
-			scope.space = space;
-			this.update();
-			scope.dispatchEvent( changeEvent );
-
-		};
-
-		this.update = function () {
-
-			if ( scope.object === undefined ) return;
-
-			scope.object.updateMatrixWorld();
-			worldPosition.setFromMatrixPosition( scope.object.matrixWorld );
-			worldRotation.setFromRotationMatrix( tempMatrix.extractRotation( scope.object.matrixWorld ) );
-
-			camera.updateMatrixWorld();
-			camPosition.setFromMatrixPosition( camera.matrixWorld );
-			camRotation.setFromRotationMatrix( tempMatrix.extractRotation( camera.matrixWorld ) );
-
-			scale = worldPosition.distanceTo( camPosition ) / 6 * scope.size;
-			this.position.copy( worldPosition );
-			this.scale.set( scale, scale, scale );
-
-			if ( camera instanceof __WEBPACK_IMPORTED_MODULE_0_three__["w" /* PerspectiveCamera */] ) {
-
-				eye.copy( camPosition ).sub( worldPosition ).normalize();
-
-			} else if ( camera instanceof __WEBPACK_IMPORTED_MODULE_0_three__["v" /* OrthographicCamera */] ) {
-
-				eye.copy( camPosition ).normalize();
-
-			}
-
-			if ( scope.space === "local" ) {
-
-				_gizmo[ _mode ].update( worldRotation, eye );
-
-			} else if ( scope.space === "world" ) {
-
-				_gizmo[ _mode ].update( new __WEBPACK_IMPORTED_MODULE_0_three__["h" /* Euler */](), eye );
-
-			}
-
-			_gizmo[ _mode ].highlight( scope.axis );
-
-		};
-
-		function onPointerHover( event ) {
-
-			if ( scope.object === undefined || _dragging === true || ( event.button !== undefined && event.button !== 0 ) ) return;
-
-			var pointer = event.changedTouches ? event.changedTouches[ 0 ] : event;
-
-			var intersect = intersectObjects( pointer, _gizmo[ _mode ].pickers.children );
-
-			var axis = null;
-
-			if ( intersect ) {
-
-				axis = intersect.object.name;
-
-				event.preventDefault();
-
-			}
-
-			if ( scope.axis !== axis ) {
-
-				scope.axis = axis;
-				scope.update();
-				scope.dispatchEvent( changeEvent );
-
-			}
-
-		}
-
-		function onPointerDown( event ) {
-
-			if ( scope.object === undefined || _dragging === true || ( event.button !== undefined && event.button !== 0 ) ) return;
-
-			var pointer = event.changedTouches ? event.changedTouches[ 0 ] : event;
-
-			if ( pointer.button === 0 || pointer.button === undefined ) {
-
-				var intersect = intersectObjects( pointer, _gizmo[ _mode ].pickers.children );
-
-				if ( intersect ) {
-
-					event.preventDefault();
-					event.stopPropagation();
-
-					scope.dispatchEvent( mouseDownEvent );
-
-					scope.axis = intersect.object.name;
-
-					scope.update();
-
-					eye.copy( camPosition ).sub( worldPosition ).normalize();
-
-					_gizmo[ _mode ].setActivePlane( scope.axis, eye );
-
-					var planeIntersect = intersectObjects( pointer, [ _gizmo[ _mode ].activePlane ] );
-
-					if ( planeIntersect ) {
-
-						oldPosition.copy( scope.object.position );
-						oldScale.copy( scope.object.scale );
-
-						oldRotationMatrix.extractRotation( scope.object.matrix );
-						worldRotationMatrix.extractRotation( scope.object.matrixWorld );
-
-						parentRotationMatrix.extractRotation( scope.object.parent.matrixWorld );
-						parentScale.setFromMatrixScale( tempMatrix.getInverse( scope.object.parent.matrixWorld ) );
-
-						offset.copy( planeIntersect.point );
-
-					}
-
-				}
-
-			}
-
-			_dragging = true;
-
-		}
-
-		function onPointerMove( event ) {
-
-			if ( scope.object === undefined || scope.axis === null || _dragging === false || ( event.button !== undefined && event.button !== 0 ) ) return;
-
-			var pointer = event.changedTouches ? event.changedTouches[ 0 ] : event;
-
-			var planeIntersect = intersectObjects( pointer, [ _gizmo[ _mode ].activePlane ] );
-
-			if ( planeIntersect === false ) return;
-
-			event.preventDefault();
-			event.stopPropagation();
-
-			point.copy( planeIntersect.point );
-
-			if ( _mode === "translate" ) {
-
-				point.sub( offset );
-				point.multiply( parentScale );
-
-				if ( scope.space === "local" ) {
-
-					point.applyMatrix4( tempMatrix.getInverse( worldRotationMatrix ) );
-
-					if ( scope.axis.search( "X" ) === - 1 ) point.x = 0;
-					if ( scope.axis.search( "Y" ) === - 1 ) point.y = 0;
-					if ( scope.axis.search( "Z" ) === - 1 ) point.z = 0;
-
-					point.applyMatrix4( oldRotationMatrix );
-
-					scope.object.position.copy( oldPosition );
-					scope.object.position.add( point );
-
-				}
-
-				if ( scope.space === "world" || scope.axis.search( "XYZ" ) !== - 1 ) {
-
-					if ( scope.axis.search( "X" ) === - 1 ) point.x = 0;
-					if ( scope.axis.search( "Y" ) === - 1 ) point.y = 0;
-					if ( scope.axis.search( "Z" ) === - 1 ) point.z = 0;
-
-					point.applyMatrix4( tempMatrix.getInverse( parentRotationMatrix ) );
-
-					scope.object.position.copy( oldPosition );
-					scope.object.position.add( point );
-
-				}
-
-				if ( scope.translationSnap !== null ) {
-
-					if ( scope.space === "local" ) {
-
-						scope.object.position.applyMatrix4( tempMatrix.getInverse( worldRotationMatrix ) );
-
-					}
-
-					if ( scope.axis.search( "X" ) !== - 1 ) scope.object.position.x = Math.round( scope.object.position.x / scope.translationSnap ) * scope.translationSnap;
-					if ( scope.axis.search( "Y" ) !== - 1 ) scope.object.position.y = Math.round( scope.object.position.y / scope.translationSnap ) * scope.translationSnap;
-					if ( scope.axis.search( "Z" ) !== - 1 ) scope.object.position.z = Math.round( scope.object.position.z / scope.translationSnap ) * scope.translationSnap;
-
-					if ( scope.space === "local" ) {
-
-						scope.object.position.applyMatrix4( worldRotationMatrix );
-
-					}
-
-				}
-
-			} else if ( _mode === "scale" ) {
-
-				point.sub( offset );
-				point.multiply( parentScale );
-
-				if ( scope.space === "local" ) {
-
-					if ( scope.axis === "XYZ" ) {
-
-						scale = 1 + ( ( point.y ) / Math.max( oldScale.x, oldScale.y, oldScale.z ) );
-
-						scope.object.scale.x = oldScale.x * scale;
-						scope.object.scale.y = oldScale.y * scale;
-						scope.object.scale.z = oldScale.z * scale;
-
-					} else {
-
-						point.applyMatrix4( tempMatrix.getInverse( worldRotationMatrix ) );
-
-						if ( scope.axis === "X" ) scope.object.scale.x = oldScale.x * ( 1 + point.x / oldScale.x );
-						if ( scope.axis === "Y" ) scope.object.scale.y = oldScale.y * ( 1 + point.y / oldScale.y );
-						if ( scope.axis === "Z" ) scope.object.scale.z = oldScale.z * ( 1 + point.z / oldScale.z );
-
-					}
-
-				}
-
-			} else if ( _mode === "rotate" ) {
-
-				point.sub( worldPosition );
-				point.multiply( parentScale );
-				tempVector.copy( offset ).sub( worldPosition );
-				tempVector.multiply( parentScale );
-
-				if ( scope.axis === "E" ) {
-
-					point.applyMatrix4( tempMatrix.getInverse( lookAtMatrix ) );
-					tempVector.applyMatrix4( tempMatrix.getInverse( lookAtMatrix ) );
-
-					rotation.set( Math.atan2( point.z, point.y ), Math.atan2( point.x, point.z ), Math.atan2( point.y, point.x ) );
-					offsetRotation.set( Math.atan2( tempVector.z, tempVector.y ), Math.atan2( tempVector.x, tempVector.z ), Math.atan2( tempVector.y, tempVector.x ) );
-
-					tempQuaternion.setFromRotationMatrix( tempMatrix.getInverse( parentRotationMatrix ) );
-
-					quaternionE.setFromAxisAngle( eye, rotation.z - offsetRotation.z );
-					quaternionXYZ.setFromRotationMatrix( worldRotationMatrix );
-
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionE );
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionXYZ );
-
-					scope.object.quaternion.copy( tempQuaternion );
-
-				} else if ( scope.axis === "XYZE" ) {
-
-					quaternionE.setFromEuler( point.clone().cross( tempVector ).normalize() ); // rotation axis
-
-					tempQuaternion.setFromRotationMatrix( tempMatrix.getInverse( parentRotationMatrix ) );
-					quaternionX.setFromAxisAngle( quaternionE, - point.clone().angleTo( tempVector ) );
-					quaternionXYZ.setFromRotationMatrix( worldRotationMatrix );
-
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionX );
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionXYZ );
-
-					scope.object.quaternion.copy( tempQuaternion );
-
-				} else if ( scope.space === "local" ) {
-
-					point.applyMatrix4( tempMatrix.getInverse( worldRotationMatrix ) );
-
-					tempVector.applyMatrix4( tempMatrix.getInverse( worldRotationMatrix ) );
-
-					rotation.set( Math.atan2( point.z, point.y ), Math.atan2( point.x, point.z ), Math.atan2( point.y, point.x ) );
-					offsetRotation.set( Math.atan2( tempVector.z, tempVector.y ), Math.atan2( tempVector.x, tempVector.z ), Math.atan2( tempVector.y, tempVector.x ) );
-
-					quaternionXYZ.setFromRotationMatrix( oldRotationMatrix );
-
-					if ( scope.rotationSnap !== null ) {
-
-						quaternionX.setFromAxisAngle( unitX, Math.round( ( rotation.x - offsetRotation.x ) / scope.rotationSnap ) * scope.rotationSnap );
-						quaternionY.setFromAxisAngle( unitY, Math.round( ( rotation.y - offsetRotation.y ) / scope.rotationSnap ) * scope.rotationSnap );
-						quaternionZ.setFromAxisAngle( unitZ, Math.round( ( rotation.z - offsetRotation.z ) / scope.rotationSnap ) * scope.rotationSnap );
-
-					} else {
-
-						quaternionX.setFromAxisAngle( unitX, rotation.x - offsetRotation.x );
-						quaternionY.setFromAxisAngle( unitY, rotation.y - offsetRotation.y );
-						quaternionZ.setFromAxisAngle( unitZ, rotation.z - offsetRotation.z );
-
-					}
-
-					if ( scope.axis === "X" ) quaternionXYZ.multiplyQuaternions( quaternionXYZ, quaternionX );
-					if ( scope.axis === "Y" ) quaternionXYZ.multiplyQuaternions( quaternionXYZ, quaternionY );
-					if ( scope.axis === "Z" ) quaternionXYZ.multiplyQuaternions( quaternionXYZ, quaternionZ );
-
-					scope.object.quaternion.copy( quaternionXYZ );
-
-				} else if ( scope.space === "world" ) {
-
-					rotation.set( Math.atan2( point.z, point.y ), Math.atan2( point.x, point.z ), Math.atan2( point.y, point.x ) );
-					offsetRotation.set( Math.atan2( tempVector.z, tempVector.y ), Math.atan2( tempVector.x, tempVector.z ), Math.atan2( tempVector.y, tempVector.x ) );
-
-					tempQuaternion.setFromRotationMatrix( tempMatrix.getInverse( parentRotationMatrix ) );
-
-					if ( scope.rotationSnap !== null ) {
-
-						quaternionX.setFromAxisAngle( unitX, Math.round( ( rotation.x - offsetRotation.x ) / scope.rotationSnap ) * scope.rotationSnap );
-						quaternionY.setFromAxisAngle( unitY, Math.round( ( rotation.y - offsetRotation.y ) / scope.rotationSnap ) * scope.rotationSnap );
-						quaternionZ.setFromAxisAngle( unitZ, Math.round( ( rotation.z - offsetRotation.z ) / scope.rotationSnap ) * scope.rotationSnap );
-
-					} else {
-
-						quaternionX.setFromAxisAngle( unitX, rotation.x - offsetRotation.x );
-						quaternionY.setFromAxisAngle( unitY, rotation.y - offsetRotation.y );
-						quaternionZ.setFromAxisAngle( unitZ, rotation.z - offsetRotation.z );
-
-					}
-
-					quaternionXYZ.setFromRotationMatrix( worldRotationMatrix );
-
-					if ( scope.axis === "X" ) tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionX );
-					if ( scope.axis === "Y" ) tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionY );
-					if ( scope.axis === "Z" ) tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionZ );
-
-					tempQuaternion.multiplyQuaternions( tempQuaternion, quaternionXYZ );
-
-					scope.object.quaternion.copy( tempQuaternion );
-
-				}
-
-			}
-
-			scope.update();
-			scope.dispatchEvent( changeEvent );
-			scope.dispatchEvent( objectChangeEvent );
-
-		}
-
-		function onPointerUp( event ) {
-
-			event.preventDefault(); // Prevent MouseEvent on mobile
-
-			if ( event.button !== undefined && event.button !== 0 ) return;
-
-			if ( _dragging && ( scope.axis !== null ) ) {
-
-				mouseUpEvent.mode = _mode;
-				scope.dispatchEvent( mouseUpEvent );
-
-			}
-
-			_dragging = false;
-
-			if ( 'TouchEvent' in window && event instanceof TouchEvent ) {
-
-				// Force "rollover"
-
-				scope.axis = null;
-				scope.update();
-				scope.dispatchEvent( changeEvent );
-
-			} else {
-
-				onPointerHover( event );
-
-			}
-
-		}
-
-		function intersectObjects( pointer, objects ) {
-
-			var rect = domElement.getBoundingClientRect();
-			var x = ( pointer.clientX - rect.left ) / rect.width;
-			var y = ( pointer.clientY - rect.top ) / rect.height;
-
-			pointerVector.set( ( x * 2 ) - 1, - ( y * 2 ) + 1 );
-			ray.setFromCamera( pointerVector, camera );
-
-			var intersections = ray.intersectObjects( objects, true );
-			return intersections[ 0 ] ? intersections[ 0 ] : false;
-
-		}
-
-	};
-
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformControls"].prototype = Object.create( __WEBPACK_IMPORTED_MODULE_0_three__["s" /* Object3D */].prototype );
-	__WEBPACK_IMPORTED_MODULE_0_three__["TransformControls"].prototype.constructor = __WEBPACK_IMPORTED_MODULE_0_three__["TransformControls"];
-
-}() );
-
-
-/***/ }),
-
-/***/ 395:
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2665,240 +286,254 @@ var Language = (function () {
 
 /***/ }),
 
-/***/ 428:
+/***/ 444:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 209,
-	"./af.js": 209,
-	"./ar": 210,
-	"./ar-dz": 211,
-	"./ar-dz.js": 211,
-	"./ar-kw": 212,
-	"./ar-kw.js": 212,
-	"./ar-ly": 213,
-	"./ar-ly.js": 213,
-	"./ar-ma": 214,
-	"./ar-ma.js": 214,
-	"./ar-sa": 215,
-	"./ar-sa.js": 215,
-	"./ar-tn": 216,
-	"./ar-tn.js": 216,
-	"./ar.js": 210,
-	"./az": 217,
-	"./az.js": 217,
-	"./be": 218,
-	"./be.js": 218,
-	"./bg": 219,
-	"./bg.js": 219,
-	"./bn": 220,
-	"./bn.js": 220,
-	"./bo": 221,
-	"./bo.js": 221,
-	"./br": 222,
-	"./br.js": 222,
-	"./bs": 223,
-	"./bs.js": 223,
-	"./ca": 224,
-	"./ca.js": 224,
-	"./cs": 225,
-	"./cs.js": 225,
-	"./cv": 226,
-	"./cv.js": 226,
-	"./cy": 227,
-	"./cy.js": 227,
-	"./da": 228,
-	"./da.js": 228,
-	"./de": 229,
-	"./de-at": 230,
-	"./de-at.js": 230,
-	"./de-ch": 231,
-	"./de-ch.js": 231,
-	"./de.js": 229,
-	"./dv": 232,
-	"./dv.js": 232,
-	"./el": 233,
-	"./el.js": 233,
-	"./en-au": 234,
-	"./en-au.js": 234,
-	"./en-ca": 235,
-	"./en-ca.js": 235,
-	"./en-gb": 236,
-	"./en-gb.js": 236,
-	"./en-ie": 237,
-	"./en-ie.js": 237,
-	"./en-nz": 238,
-	"./en-nz.js": 238,
-	"./eo": 239,
-	"./eo.js": 239,
-	"./es": 240,
-	"./es-do": 241,
-	"./es-do.js": 241,
-	"./es.js": 240,
-	"./et": 242,
-	"./et.js": 242,
-	"./eu": 243,
-	"./eu.js": 243,
-	"./fa": 244,
-	"./fa.js": 244,
-	"./fi": 245,
-	"./fi.js": 245,
-	"./fo": 246,
-	"./fo.js": 246,
-	"./fr": 247,
-	"./fr-ca": 248,
-	"./fr-ca.js": 248,
-	"./fr-ch": 249,
-	"./fr-ch.js": 249,
-	"./fr.js": 247,
-	"./fy": 250,
-	"./fy.js": 250,
-	"./gd": 251,
-	"./gd.js": 251,
-	"./gl": 252,
-	"./gl.js": 252,
-	"./gom-latn": 253,
-	"./gom-latn.js": 253,
-	"./he": 254,
-	"./he.js": 254,
-	"./hi": 255,
-	"./hi.js": 255,
-	"./hr": 256,
-	"./hr.js": 256,
-	"./hu": 257,
-	"./hu.js": 257,
-	"./hy-am": 258,
-	"./hy-am.js": 258,
-	"./id": 259,
-	"./id.js": 259,
-	"./is": 260,
-	"./is.js": 260,
-	"./it": 261,
-	"./it.js": 261,
-	"./ja": 262,
-	"./ja.js": 262,
-	"./jv": 263,
-	"./jv.js": 263,
-	"./ka": 264,
-	"./ka.js": 264,
-	"./kk": 265,
-	"./kk.js": 265,
-	"./km": 266,
-	"./km.js": 266,
-	"./kn": 267,
-	"./kn.js": 267,
-	"./ko": 268,
-	"./ko.js": 268,
-	"./ky": 269,
-	"./ky.js": 269,
-	"./lb": 270,
-	"./lb.js": 270,
-	"./lo": 271,
-	"./lo.js": 271,
-	"./lt": 272,
-	"./lt.js": 272,
-	"./lv": 273,
-	"./lv.js": 273,
-	"./me": 274,
-	"./me.js": 274,
-	"./mi": 275,
-	"./mi.js": 275,
-	"./mk": 276,
-	"./mk.js": 276,
-	"./ml": 277,
-	"./ml.js": 277,
-	"./mr": 278,
-	"./mr.js": 278,
-	"./ms": 279,
-	"./ms-my": 280,
-	"./ms-my.js": 280,
-	"./ms.js": 279,
-	"./my": 281,
-	"./my.js": 281,
-	"./nb": 282,
-	"./nb.js": 282,
-	"./ne": 283,
-	"./ne.js": 283,
-	"./nl": 284,
-	"./nl-be": 285,
-	"./nl-be.js": 285,
-	"./nl.js": 284,
-	"./nn": 286,
-	"./nn.js": 286,
-	"./pa-in": 287,
-	"./pa-in.js": 287,
-	"./pl": 288,
-	"./pl.js": 288,
-	"./pt": 289,
-	"./pt-br": 290,
-	"./pt-br.js": 290,
-	"./pt.js": 289,
-	"./ro": 291,
-	"./ro.js": 291,
-	"./ru": 292,
-	"./ru.js": 292,
-	"./sd": 293,
-	"./sd.js": 293,
-	"./se": 294,
-	"./se.js": 294,
-	"./si": 295,
-	"./si.js": 295,
-	"./sk": 296,
-	"./sk.js": 296,
-	"./sl": 297,
-	"./sl.js": 297,
-	"./sq": 298,
-	"./sq.js": 298,
-	"./sr": 299,
-	"./sr-cyrl": 300,
-	"./sr-cyrl.js": 300,
-	"./sr.js": 299,
-	"./ss": 301,
-	"./ss.js": 301,
-	"./sv": 302,
-	"./sv.js": 302,
-	"./sw": 303,
-	"./sw.js": 303,
-	"./ta": 304,
-	"./ta.js": 304,
-	"./te": 305,
-	"./te.js": 305,
-	"./tet": 306,
-	"./tet.js": 306,
-	"./th": 307,
-	"./th.js": 307,
-	"./tl-ph": 308,
-	"./tl-ph.js": 308,
-	"./tlh": 309,
-	"./tlh.js": 309,
-	"./tr": 310,
-	"./tr.js": 310,
-	"./tzl": 311,
-	"./tzl.js": 311,
-	"./tzm": 312,
-	"./tzm-latn": 313,
-	"./tzm-latn.js": 313,
-	"./tzm.js": 312,
-	"./uk": 314,
-	"./uk.js": 314,
-	"./ur": 315,
-	"./ur.js": 315,
-	"./uz": 316,
-	"./uz-latn": 317,
-	"./uz-latn.js": 317,
-	"./uz.js": 316,
-	"./vi": 318,
-	"./vi.js": 318,
-	"./x-pseudo": 319,
-	"./x-pseudo.js": 319,
-	"./yo": 320,
-	"./yo.js": 320,
-	"./zh-cn": 321,
-	"./zh-cn.js": 321,
-	"./zh-hk": 322,
-	"./zh-hk.js": 322,
-	"./zh-tw": 323,
-	"./zh-tw.js": 323
+	"./af": 213,
+	"./af.js": 213,
+	"./ar": 214,
+	"./ar-dz": 215,
+	"./ar-dz.js": 215,
+	"./ar-kw": 216,
+	"./ar-kw.js": 216,
+	"./ar-ly": 217,
+	"./ar-ly.js": 217,
+	"./ar-ma": 218,
+	"./ar-ma.js": 218,
+	"./ar-sa": 219,
+	"./ar-sa.js": 219,
+	"./ar-tn": 220,
+	"./ar-tn.js": 220,
+	"./ar.js": 214,
+	"./az": 221,
+	"./az.js": 221,
+	"./be": 222,
+	"./be.js": 222,
+	"./bg": 223,
+	"./bg.js": 223,
+	"./bm": 224,
+	"./bm.js": 224,
+	"./bn": 225,
+	"./bn.js": 225,
+	"./bo": 226,
+	"./bo.js": 226,
+	"./br": 227,
+	"./br.js": 227,
+	"./bs": 228,
+	"./bs.js": 228,
+	"./ca": 229,
+	"./ca.js": 229,
+	"./cs": 230,
+	"./cs.js": 230,
+	"./cv": 231,
+	"./cv.js": 231,
+	"./cy": 232,
+	"./cy.js": 232,
+	"./da": 233,
+	"./da.js": 233,
+	"./de": 234,
+	"./de-at": 235,
+	"./de-at.js": 235,
+	"./de-ch": 236,
+	"./de-ch.js": 236,
+	"./de.js": 234,
+	"./dv": 237,
+	"./dv.js": 237,
+	"./el": 238,
+	"./el.js": 238,
+	"./en-au": 239,
+	"./en-au.js": 239,
+	"./en-ca": 240,
+	"./en-ca.js": 240,
+	"./en-gb": 241,
+	"./en-gb.js": 241,
+	"./en-ie": 242,
+	"./en-ie.js": 242,
+	"./en-il": 243,
+	"./en-il.js": 243,
+	"./en-nz": 244,
+	"./en-nz.js": 244,
+	"./eo": 245,
+	"./eo.js": 245,
+	"./es": 246,
+	"./es-do": 247,
+	"./es-do.js": 247,
+	"./es-us": 248,
+	"./es-us.js": 248,
+	"./es.js": 246,
+	"./et": 249,
+	"./et.js": 249,
+	"./eu": 250,
+	"./eu.js": 250,
+	"./fa": 251,
+	"./fa.js": 251,
+	"./fi": 252,
+	"./fi.js": 252,
+	"./fo": 253,
+	"./fo.js": 253,
+	"./fr": 254,
+	"./fr-ca": 255,
+	"./fr-ca.js": 255,
+	"./fr-ch": 256,
+	"./fr-ch.js": 256,
+	"./fr.js": 254,
+	"./fy": 257,
+	"./fy.js": 257,
+	"./gd": 258,
+	"./gd.js": 258,
+	"./gl": 259,
+	"./gl.js": 259,
+	"./gom-latn": 260,
+	"./gom-latn.js": 260,
+	"./gu": 261,
+	"./gu.js": 261,
+	"./he": 262,
+	"./he.js": 262,
+	"./hi": 263,
+	"./hi.js": 263,
+	"./hr": 264,
+	"./hr.js": 264,
+	"./hu": 265,
+	"./hu.js": 265,
+	"./hy-am": 266,
+	"./hy-am.js": 266,
+	"./id": 267,
+	"./id.js": 267,
+	"./is": 268,
+	"./is.js": 268,
+	"./it": 269,
+	"./it.js": 269,
+	"./ja": 270,
+	"./ja.js": 270,
+	"./jv": 271,
+	"./jv.js": 271,
+	"./ka": 272,
+	"./ka.js": 272,
+	"./kk": 273,
+	"./kk.js": 273,
+	"./km": 274,
+	"./km.js": 274,
+	"./kn": 275,
+	"./kn.js": 275,
+	"./ko": 276,
+	"./ko.js": 276,
+	"./ky": 277,
+	"./ky.js": 277,
+	"./lb": 278,
+	"./lb.js": 278,
+	"./lo": 279,
+	"./lo.js": 279,
+	"./lt": 280,
+	"./lt.js": 280,
+	"./lv": 281,
+	"./lv.js": 281,
+	"./me": 282,
+	"./me.js": 282,
+	"./mi": 283,
+	"./mi.js": 283,
+	"./mk": 284,
+	"./mk.js": 284,
+	"./ml": 285,
+	"./ml.js": 285,
+	"./mr": 286,
+	"./mr.js": 286,
+	"./ms": 287,
+	"./ms-my": 288,
+	"./ms-my.js": 288,
+	"./ms.js": 287,
+	"./mt": 289,
+	"./mt.js": 289,
+	"./my": 290,
+	"./my.js": 290,
+	"./nb": 291,
+	"./nb.js": 291,
+	"./ne": 292,
+	"./ne.js": 292,
+	"./nl": 293,
+	"./nl-be": 294,
+	"./nl-be.js": 294,
+	"./nl.js": 293,
+	"./nn": 295,
+	"./nn.js": 295,
+	"./pa-in": 296,
+	"./pa-in.js": 296,
+	"./pl": 297,
+	"./pl.js": 297,
+	"./pt": 298,
+	"./pt-br": 299,
+	"./pt-br.js": 299,
+	"./pt.js": 298,
+	"./ro": 300,
+	"./ro.js": 300,
+	"./ru": 301,
+	"./ru.js": 301,
+	"./sd": 302,
+	"./sd.js": 302,
+	"./se": 303,
+	"./se.js": 303,
+	"./si": 304,
+	"./si.js": 304,
+	"./sk": 305,
+	"./sk.js": 305,
+	"./sl": 306,
+	"./sl.js": 306,
+	"./sq": 307,
+	"./sq.js": 307,
+	"./sr": 308,
+	"./sr-cyrl": 309,
+	"./sr-cyrl.js": 309,
+	"./sr.js": 308,
+	"./ss": 310,
+	"./ss.js": 310,
+	"./sv": 311,
+	"./sv.js": 311,
+	"./sw": 312,
+	"./sw.js": 312,
+	"./ta": 313,
+	"./ta.js": 313,
+	"./te": 314,
+	"./te.js": 314,
+	"./tet": 315,
+	"./tet.js": 315,
+	"./tg": 316,
+	"./tg.js": 316,
+	"./th": 317,
+	"./th.js": 317,
+	"./tl-ph": 318,
+	"./tl-ph.js": 318,
+	"./tlh": 319,
+	"./tlh.js": 319,
+	"./tr": 320,
+	"./tr.js": 320,
+	"./tzl": 321,
+	"./tzl.js": 321,
+	"./tzm": 322,
+	"./tzm-latn": 323,
+	"./tzm-latn.js": 323,
+	"./tzm.js": 322,
+	"./ug-cn": 324,
+	"./ug-cn.js": 324,
+	"./uk": 325,
+	"./uk.js": 325,
+	"./ur": 326,
+	"./ur.js": 326,
+	"./uz": 327,
+	"./uz-latn": 328,
+	"./uz-latn.js": 328,
+	"./uz.js": 327,
+	"./vi": 329,
+	"./vi.js": 329,
+	"./x-pseudo": 330,
+	"./x-pseudo.js": 330,
+	"./yo": 331,
+	"./yo.js": 331,
+	"./zh-cn": 332,
+	"./zh-cn.js": 332,
+	"./zh-hk": 333,
+	"./zh-hk.js": 333,
+	"./zh-tw": 334,
+	"./zh-tw.js": 334
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -2914,11 +549,99 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 428;
+webpackContext.id = 444;
 
 /***/ }),
 
-/***/ 446:
+/***/ 464:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShrinkingHeader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the ShrinkingHeaderComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var ShrinkingHeader = (function () {
+    function ShrinkingHeader(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        this.messageEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    ShrinkingHeader.prototype.sendMessage = function () {
+        this.messageEvent.emit(this.hide);
+        console.log("evento: " + this.hide);
+    };
+    ShrinkingHeader.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.renderer.setElementStyle(this.element.nativeElement, 'height', this.headerHeight + 'px');
+        this.scrollArea.ionScroll.subscribe(function (ev) {
+            _this.resizeHeader(ev);
+        });
+    };
+    ShrinkingHeader.prototype.resizeHeader = function (ev) {
+        var _this = this;
+        ev.domWrite(function () {
+            _this.newHeaderHeight = _this.headerHeight - ev.scrollTop;
+            console.log("headeheight: " + _this.newHeaderHeight);
+            if (_this.newHeaderHeight < 0) {
+                _this.newHeaderHeight = 0;
+            }
+            if (_this.newHeaderHeight < 69) {
+                _this.hide = false;
+                _this.sendMessage();
+            }
+            if (_this.newHeaderHeight >= 69) {
+                _this.hide = true;
+                _this.sendMessage();
+                console.log("header > 20");
+            }
+            _this.renderer.setElementStyle(_this.element.nativeElement, 'height', _this.newHeaderHeight + 'px');
+        });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('scrollArea'),
+        __metadata("design:type", Object)
+    ], ShrinkingHeader.prototype, "scrollArea", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('headerHeight'),
+        __metadata("design:type", Number)
+    ], ShrinkingHeader.prototype, "headerHeight", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('#imgHeader'),
+        __metadata("design:type", Object)
+    ], ShrinkingHeader.prototype, "imgHeader", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], ShrinkingHeader.prototype, "messageEvent", void 0);
+    ShrinkingHeader = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'shrinking-header',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\shrinking-header\shrinking-header.html"*/'<ng-content></ng-content>'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\shrinking-header\shrinking-header.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]])
+    ], ShrinkingHeader);
+    return ShrinkingHeader;
+}());
+
+//# sourceMappingURL=shrinking-header.js.map
+
+/***/ }),
+
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2936,10 +659,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var RadarChartComponent = (function () {
     function RadarChartComponent() {
-        //   @ViewChild('svgContainer') dataContainer: ElementRef;
-        //   loadData(data) {
-        //    this.dataContainer.nativeElement.innerHTML = data;
-        //  }   
         this.labels = [];
         this.labelsData = [];
         this.labelsSvg = [];
@@ -2988,24 +707,24 @@ var RadarChartComponent = (function () {
     RadarChartComponent.prototype.chartHovered = function (e) {
         console.log(e);
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Array)
+    ], RadarChartComponent.prototype, "data", void 0);
+    RadarChartComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'radar-chart',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\radar-chart\radar-chart.html"*/'<!-- Generated template for the RadarChartComponent component -->\n\n<div style="display: block">\n  <canvas baseChart \n          [datasets]="radarChartData"\n          [labels]="radarChartLabels"\n          [chartType]="radarChartType"\n          (chartHover)="chartHovered($event)"\n          (chartClick)="chartClicked($event)"\n          [options]="options"\n          [colors]="chartColors">\n          </canvas>\n</div>\n\n<ion-grid>\n  <ion-row>\n    <ion-col col-2 *ngFor="let item of labelsSvg">\n      <components-item-svg [itemSvg]="item"></components-item-svg>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  \n\n\n  \n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\radar-chart\radar-chart.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], RadarChartComponent);
     return RadarChartComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", Array)
-], RadarChartComponent.prototype, "data", void 0);
-RadarChartComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'radar-chart',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\components\radar-chart\radar-chart.html"*/'<!-- Generated template for the RadarChartComponent component -->\n\n<div style="display: block">\n  <canvas baseChart \n          [datasets]="radarChartData"\n          [labels]="radarChartLabels"\n          [chartType]="radarChartType"\n          (chartHover)="chartHovered($event)"\n          (chartClick)="chartClicked($event)"\n          [options]="options"\n          [colors]="chartColors">\n          </canvas>\n</div>\n\n<ion-grid>\n  <ion-row>\n    <ion-col col-3 *ngFor="let item of labelsSvg">\n      <components-item-svg [itemSvg]="item"></components-item-svg>\n    </ion-col>\n  </ion-row>\n</ion-grid>\n  \n\n\n  \n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\components\radar-chart\radar-chart.html"*/
-    }),
-    __metadata("design:paramtypes", [])
-], RadarChartComponent);
 
 //# sourceMappingURL=radar-chart.js.map
 
 /***/ }),
 
-/***/ 447:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3032,26 +751,64 @@ var ComponentsItemSvgComponent = (function () {
     ComponentsItemSvgComponent.prototype.ngOnInit = function () {
         this.loadData(this.itemSvg);
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], ComponentsItemSvgComponent.prototype, "itemSvg", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('svgContainer'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], ComponentsItemSvgComponent.prototype, "dataContainer", void 0);
+    ComponentsItemSvgComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'components-item-svg',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\components-item-svg\components-item-svg.html"*/'<!-- Generated template for the ComponentsItemSvgComponent component -->\n<div #svgContainer></div>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\components-item-svg\components-item-svg.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], ComponentsItemSvgComponent);
     return ComponentsItemSvgComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", String)
-], ComponentsItemSvgComponent.prototype, "itemSvg", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('svgContainer'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-], ComponentsItemSvgComponent.prototype, "dataContainer", void 0);
-ComponentsItemSvgComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'components-item-svg',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\components\components-item-svg\components-item-svg.html"*/'<!-- Generated template for the ComponentsItemSvgComponent component -->\n<div #svgContainer></div>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\new-ionic3-angular4\src\components\components-item-svg\components-item-svg.html"*/
-    }),
-    __metadata("design:paramtypes", [])
-], ComponentsItemSvgComponent);
 
 //# sourceMappingURL=components-item-svg.js.map
 
+/***/ }),
+
+/***/ 467:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SegmentHomeProfile; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the SegmentHomeProfileComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var SegmentHomeProfile = (function () {
+    function SegmentHomeProfile() {
+    }
+    SegmentHomeProfile = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'segment-home-profile',template:/*ion-inline-start:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\segment-home-profile\segment-home-profile.html"*/'<ion-card>\n  <ion-card-header>\n    Profilo\n  </ion-card-header>\n  <ion-card-content>\n    <ion-grid>\n      <ion-row>\n        <ion-col col-1>\n          <ion-icon name="pin"></ion-icon>                            \n        </ion-col>\n        <ion-col col-11>\n          Palombara Sabina (Roma), Italia\n        </ion-col>\n        <ion-col col-1>\n          <ion-icon name="school"></ion-icon>                            \n        </ion-col>\n        <ion-col col-11>\n          Università Roma Torvegata, Laurea triennale in Informatica\n        </ion-col>\n        <ion-col col-1>\n            <ion-icon name="mail"></ion-icon>                            \n          </ion-col>\n          <ion-col col-11>\n            mtt.silvi@gmail.com\n        </ion-col>\n        <ion-col col-1>\n            <ion-icon name="call"></ion-icon>                            \n          </ion-col>\n          <ion-col col-11>\n            346 9705124 \n        </ion-col>\n        <ion-col col-1>\n            <ion-icon name="pricetag"></ion-icon>                            \n          </ion-col>\n          <ion-col col-11>\n            Neolaureato in Informatica, Sviluppatore Front End (HTML5,CSS3,JS,Angular,ionic) e BackEnd (nodejs,java,spring,MySQL)\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card-content>\n</ion-card>\n'/*ion-inline-end:"C:\Users\ehy rey\Desktop\SilviCorp\ionic\newCV\src\components\segment-home-profile\segment-home-profile.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], SegmentHomeProfile);
+    return SegmentHomeProfile;
+}());
+
+//# sourceMappingURL=segment-home-profile.js.map
+
 /***/ })
 
-},[324]);
+},[335]);
 //# sourceMappingURL=main.js.map
